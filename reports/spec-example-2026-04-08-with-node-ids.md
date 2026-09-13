@@ -23,13 +23,14 @@
 
 | Tier | Expectation | Summary | Status |
 | --- | --- | --- | --- |
-| 0 | has-well-formed-context | The `@context` takes a shape JSON-LD allows | ✅ met |
-| 0 | has-well-formed-graph | The `@graph` holds nodes, not scalars | ✅ met |
-| 0 | node-rooted | The document is a node object, not a scalar | ✅ met |
-| 1 | composition-fingerprint | Includes a digest of the artifact composition | ✅ met |
-| 1 | hash-form | Every hash is a checkable sha256 value | ✅ met |
-| 1 | tro-minimal | The declaration has the two parts a TRO needs | ✅ met |
-| 1 | trov-terms-known | No `trov:` name is misspelt or invented | ✅ met |
-| 1 | trs-typed | The assembling system declares itself a TRS | ✅ met |
-| 2 | context-base | Identifiers expand into a namespace of its own | ✅ met |
-| 2 | node-id-present | No node is unreferenceable from outside | ✅ met |
+| 0 | context-well-formed | The root `@context`, if any, has a form JSON-LD allows | ✅ met |
+| 0 | document-rooted-in-nodes | The document is an object or an array of objects | ✅ met |
+| 0 | graph-well-formed | The root `@graph`, if any, holds objects, not bare values | ✅ met |
+| 1 | composition-fingerprinted | The TRO's composition, if any, carries a fingerprint | ✅ met |
+| 1 | context-and-graph-present | A JSON object with an `@context` and an `@graph` | ✅ met |
+| 1 | hashes-well-formed | The TRO's artifact and fingerprint hashes are well-formed sha256 | ✅ met |
+| 1 | tro-assembled-by-trs | The TRO names its assembling system, typed as a TRS | ✅ met |
+| 1 | tro-top-level-in-graph | The TRO is a top-level member of the `@graph` | ✅ met |
+| 1 | trov-terms-known | Every `trov:` name is one TROV defines | ✅ met |
+| 2 | base-declared | The `@context` includes an `@base` | ✅ met |
+| 2 | node-ids-present | Every node carries an explicit `@id` | ✅ met |

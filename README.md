@@ -16,18 +16,17 @@ the `tro-checks` module on the candidates in this repository.
 | [`candidates/manifest.json`](candidates/manifest.json) | What each candidate is, and the tier this repository expects it to satisfy. |
 | [`reports/`](reports) | What the checks found, one report per candidate. |
 | [`Dockerfile`](Dockerfile) | Requires `tro-checks`. |
-| [`REVIEWS.md`](REVIEWS.md) | Who has read which version of which file. |
 
 ## Running it
 
-Requires Git, Docker and GNU Make.
+In the top-level directory of a clone of this repository, build the Docker image:
 
 ```
 make build-parent      # once, on a fresh clone
 make build-image
 ```
 
-Regenerate the reports and `REVIEWS.md`:
+Regenerate the reports:
 
 ```
 make build-reports
