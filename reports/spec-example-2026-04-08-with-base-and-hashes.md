@@ -4,7 +4,7 @@ Candidate: `spec-example-2026-04-08-with-base-and-hashes.jsonld`
 
 The 2026-04-08 example with an `@base` in its `@context` and a sha256 value in each of the four hash fields. Every value is computed from the artifact's own `@id` for reproducibility's sake only.
 
-Target: Tier 1 -- Self-Contained (declared)
+Target: Tier 1 -- Self-Contained (from manifest declaration)
 
 ## Assessment
 
@@ -12,8 +12,6 @@ Target: Tier 1 -- Self-Contained (declared)
 - Tier 1 -- Self-Contained: met
 
 ## Findings
-
-Every expectation in the target was put to `jsonschema-validate` and `ajv-validate`.
 
 ### has-well-formed-context (Tier 0): met
 

@@ -4,7 +4,7 @@ Candidate: `spec-example-2026-04-08-with-node-ids.jsonld`
 
 The preceding candidate with an `@id` on each of its five remaining bare node objects: `trov:createdWith` and the four `trov:hash` nodes.
 
-Target: Tier 2 -- Linkable-Data (declared)
+Target: Tier 2 -- Linkable-Data (from manifest declaration)
 
 ## Assessment
 
@@ -13,8 +13,6 @@ Target: Tier 2 -- Linkable-Data (declared)
 - Tier 2 -- Linkable-Data: met
 
 ## Findings
-
-Every expectation in the target was put to `jsonschema-validate` and `ajv-validate`.
 
 ### has-well-formed-context (Tier 0): met
 
