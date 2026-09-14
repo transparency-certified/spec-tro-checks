@@ -24,8 +24,11 @@
 | Tier | Expectation | Summary | Status |
 | --- | --- | --- | --- |
 | 0 | context-well-formed | The root `@context`, if any, has a form JSON-LD allows | ✅ met |
+| 0 | disallowed-context-keywords-absent | No keyword in the `@context` other than `@base` | ✅ met |
+| 0 | disallowed-node-keywords-absent | No keyword outside the `@context` other than `@context`, `@graph`, `@id` and `@type` | ✅ met |
 | 0 | document-rooted-in-nodes | The document is an object or an array of objects | ✅ met |
 | 0 | graph-well-formed | The root `@graph`, if any, holds objects, not bare values | ✅ met |
+| 0 | ids-and-types-strings | Every `@id` is a string; every `@type` a string or an array of strings | ✅ met |
 | 1 | composition-fingerprinted | The TRO's composition, if any, carries a fingerprint | ✅ met |
 | 1 | context-and-graph-present | A JSON object with an `@context` and an `@graph` | ✅ met |
 | 1 | hashes-well-formed | The TRO's artifact and fingerprint hashes are well-formed sha256 | ✅ met |
