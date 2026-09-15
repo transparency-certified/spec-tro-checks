@@ -16,7 +16,7 @@
 | Tier | ID | Description | Status |
 | --- | --- | --- | --- |
 | 1 | SAFE-JSON | JSON that every parser reads the same way | ✅ met |
-| 2 | VALID-JSON-LD | Valid JSON-LD, whatever vocabulary it uses | ✅ met |
+| 2 | VALID-JSON-LD | Valid JSON-LD | ✅ met |
 | 3 | TRACE-JSON-LD | JSON-LD in the restricted form the TRACE Specification defines for TRO declarations | ✅ met |
 | 4 | STANDALONE-TRO | A TRO declaration with the structure the Specification requires, whose references resolve within it | ✅ met |
 | *5* | *LINKABLE-TRO* | *A TRO declaration whose element identifiers cannot collide with another TRO's* | *not claimed* |
@@ -26,7 +26,7 @@
 | Tier | Expectation | Summary | Status |
 | --- | --- | --- | --- |
 | 1 | duplicate-member-names-absent | No object repeats a member name | ✅ met |
-| 1 | json-parses | The candidate is JSON | ✅ met |
+| 1 | json-parses | The candidate parses as JSON without errors | ✅ met |
 | 1 | lone-surrogates-absent | No string or member name has an unpaired surrogate | ✅ met |
 | 1 | numbers-within-range | Every number fits a double; every integer is exact | ✅ met |
 | 1 | utf8-encoded | The candidate is UTF-8 | ✅ met |
