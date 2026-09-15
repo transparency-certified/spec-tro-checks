@@ -1,14 +1,14 @@
 {
     "spec-example-2026-04-08": {
-        "target": 1,
+        "target": "STANDALONE-TRO",
         "description": "The specification's [Complete Example](https://transparency-certified.github.io/trace-specification/docs/tro-declaration-format#complete-example), copied verbatim on 2026-09-03 from the 2026-04-08 revision. Its four `trov:hashValue` fields carry elided placeholders (`a1b2c3d4...`, `aaa1...`) and its `@context` declares no `@base`."
     },
     "spec-example-2026-04-08-with-base-and-hashes": {
-        "target": 1,
+        "target": "STANDALONE-TRO",
         "description": "The 2026-04-08 example with an `@base` in its `@context` and a sha256 value in each of the four hash fields. Every value is computed from the artifact's own `@id` for reproducibility's sake only."
     },
     "spec-example-2026-04-08-with-node-ids": {
-        "target": 2,
+        "target": "LINKABLE-TRO",
         "description": "The preceding candidate with an `@id` on each of its five remaining bare node objects: `trov:createdWith` and the four `trov:hash` nodes."
     }
 }
