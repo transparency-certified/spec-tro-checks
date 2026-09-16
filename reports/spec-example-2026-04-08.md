@@ -63,6 +63,7 @@
 <tr><th colspan="3" align="left"><br>Tier&nbsp;4&nbsp;—&nbsp;STANDALONE&#8209;TRO&nbsp;&nbsp;❌&nbsp;not&nbsp;met</th></tr>
 <tr><th align="left">Expectation</th><th align="left">Summary</th><th align="left">Status</th></tr>
 <tr><td>composition-fingerprinted</td><td>The TRO's composition, if any, carries a fingerprint</td><td>✅&nbsp;met</td></tr>
+<tr><td>core-prefixes-pinned</td><td>The <code>@context</code> declares <code>trov</code>, mapped to a TROV namespace, and no other prefix maps there; <code>rdf</code>, <code>rdfs</code> and <code>schema</code>, where declared, map to their Declaration Format namespaces</td><td>✅&nbsp;met</td></tr>
 <tr><td>hashes-well-formed</td><td>The TRO's artifact and fingerprint hashes are well-formed sha256</td><td>❌&nbsp;not&nbsp;met</td></tr>
 <tr><td>tro-assembled-by-trs</td><td>The TRO names its assembling system, typed as a TRS</td><td>✅&nbsp;met</td></tr>
 <tr><td>tro-top-level-in-graph</td><td>The TRO is a top-level member of the <code>@graph</code></td><td>✅&nbsp;met</td></tr>
