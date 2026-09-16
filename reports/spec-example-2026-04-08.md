@@ -53,10 +53,13 @@
 <tr><th align="left">Expectation</th><th align="left">Summary</th><th align="left">Status</th></tr>
 <tr><td>base-simple-url</td><td>The <code>@base</code>, if any, is a simple URL: a host, no user info, dot segments, query or fragment, only URL characters, and a final <code>/</code></td><td>✅&nbsp;met</td></tr>
 <tr><td>base-web-scheme</td><td>The <code>@base</code>, if any, uses the <code>https</code> or <code>http</code> scheme</td><td>✅&nbsp;met</td></tr>
+<tr><td>context-aliases-absent</td><td>No term definition aliases a property; a term definition holds only a <code>@type</code> naming a datatype</td><td>✅&nbsp;met</td></tr>
+<tr><td>context-local</td><td>The <code>@context</code> is inline: no string names a remote context</td><td>✅&nbsp;met</td></tr>
 <tr><td>disallowed-context-keywords-absent</td><td>No member of an <code>@context</code> is a keyword other than <code>@base</code>; what a term definition holds is not a member of the <code>@context</code></td><td>✅&nbsp;met</td></tr>
 <tr><td>disallowed-node-keywords-absent</td><td>No keyword outside the <code>@context</code> other than <code>@context</code>, <code>@graph</code>, <code>@id</code> and <code>@type</code></td><td>✅&nbsp;met</td></tr>
 <tr><td>prefix-namespaces-terminated</td><td>Every prefix maps to an absolute IRI ending in <code>#</code> or <code>/</code></td><td>✅&nbsp;met</td></tr>
 <tr><td>root-context-and-graph-only</td><td>A JSON object with an <code>@context</code>, an <code>@graph</code>, and nothing else</td><td>✅&nbsp;met</td></tr>
+<tr><td>types-prefixed-or-absolute</td><td>Every <code>@type</code> value is a prefixed or absolute IRI, never a bare name</td><td>✅&nbsp;met</td></tr>
 <tr><th colspan="3" align="left"><br>Tier&nbsp;4&nbsp;—&nbsp;STANDALONE&#8209;TRO&nbsp;&nbsp;❌&nbsp;not&nbsp;met</th></tr>
 <tr><th align="left">Expectation</th><th align="left">Summary</th><th align="left">Status</th></tr>
 <tr><td>composition-fingerprinted</td><td>The TRO's composition, if any, carries a fingerprint</td><td>✅&nbsp;met</td></tr>
