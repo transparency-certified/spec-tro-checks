@@ -2,87 +2,72 @@
 
 ## Candidate Information
 
-|  |  |
-| --- | --- |
-| Candidate | `spec-example-2026-04-08.jsonld` |
-| Description | The specification's [Complete Example](https://transparency-certified.github.io/trace-specification/docs/tro-declaration-format#complete-example), copied verbatim<br>on 2026-09-03 from the 2026-04-08 revision. Its four<br>`trov:hashValue` fields carry elided placeholders<br>(`a1b2c3d4...`, `aaa1...`) and its `@context` declares no<br>`@base`. |
-| Target | 4 STANDALONE-TRO |
-| Target declared by | the candidate manifest |
+<table>
+<tbody>
+<tr><td>Candidate</td><td><code>spec-example-2026-04-08.jsonld</code></td></tr>
+<tr><td>Description</td><td>The specification's <a href="https://transparency-certified.github.io/trace-specification/docs/tro-declaration-format#complete-example">Complete Example</a>, copied verbatim on 2026-09-03 from the 2026-04-08 revision. Its four <code>trov:hashValue</code> fields carry elided placeholders (<code>a1b2c3d4...</code>, <code>aaa1...</code>) and its <code>@context</code> declares no <code>@base</code>.</td></tr>
+<tr><td>Target</td><td>4 STANDALONE-TRO</td></tr>
+<tr><td>Target declared by</td><td>the candidate manifest</td></tr>
+</tbody>
+</table>
 
 ## Tier Assessments
 
-| Tier | ID | Description | Status |
-| --- | --- | --- | --- |
-| 1 | SAFE-JSON | JSON that every supported parser reads the same way | ✅ met |
-| 2 | SAFE-JSON-LD | JSON-LD that every supported processor reads the same<br>way | ✅ met |
-| 3 | TRACE-JSON-LD | JSON-LD in the restricted form the TRACE Specification<br>defines for TRO declarations | ✅ met |
-| 4 | STANDALONE-TRO | A TRO declaration with the structure the TRACE<br>Specification requires, whose references resolve within<br>it | ❌ not met |
-| *5* | *LINKABLE-TRO* | *A TRO declaration whose element identifiers cannot<br>collide with another TRO's* | *not claimed* |
+<table>
+<thead>
+<tr><th align="left">Tier</th><th align="left">ID</th><th align="left">Description</th><th align="left">Status</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>SAFE-JSON</td><td>JSON that every supported parser reads the same way</td><td>✅ met</td></tr>
+<tr><td>2</td><td>SAFE-JSON-LD</td><td>JSON-LD that every supported processor reads the same way</td><td>✅ met</td></tr>
+<tr><td>3</td><td>TRACE-JSON-LD</td><td>JSON-LD in the restricted form the TRACE Specification defines for TRO declarations</td><td>✅ met</td></tr>
+<tr><td>4</td><td>STANDALONE-TRO</td><td>A TRO declaration with the structure the TRACE Specification requires, whose references resolve within it</td><td>❌ not met</td></tr>
+<tr><td><em>5</em></td><td><em>LINKABLE-TRO</em></td><td><em>A TRO declaration whose element identifiers cannot collide with another TRO's</em></td><td><em>not claimed</em></td></tr>
+</tbody>
+</table>
 
 ## Expectation Findings by Tier
 
-### Tier 1 — SAFE-JSON
-
-| Expectation | Summary | Status |
-| --- | --- | --- |
-| duplicate-member-names-absent | No object repeats a member name | ✅ met |
-| json-parses | The candidate parses as JSON without errors | ✅ met |
-| lone-surrogates-absent | No string or member name has an unpaired surrogate | ✅ met |
-| numbers-within-range | Every number fits a double; every integer is exact | ✅ met |
-| utf8-encoded | The candidate is UTF-8 | ✅ met |
-
-Assessment status: ✅ met
-
-### Tier 2 — SAFE-JSON-LD
-
-| Expectation | Summary | Status |
-| --- | --- | --- |
-| containers-absent | No `@container` in a term definition | ✅ met |
-| context-at-root-only | The document's only `@context` is the one at its root: no<br>node below it and no term definition within it carries<br>another | ✅ met |
-| context-protection-absent | No `@protected`, `@propagate` or `@import` in a context | ✅ met |
-| context-well-formed | The root `@context`, if any, has a form JSON-LD allows | ✅ met |
-| graph-at-root-only | `@graph` appears only at the root | ✅ met |
-| graph-well-formed | The root `@graph`, if any, holds objects, not bare values | ✅ met |
-| id-coercion-absent | No `"@type": "@id"` in a term definition | ✅ met |
-| ids-and-types-strings | Every `@id` is a string; every `@type` a string or an array<br>of strings | ✅ met |
-| relative-ids-plain | Every relative `@id` is a plain path, with no leading `/`<br>or `@`, no `.` or `..` segments, and no `?` or `#` | ✅ met |
-| vocab-absent | No `@vocab` in a context | ✅ met |
-
-Assessment status: ✅ met
-
-### Tier 3 — TRACE-JSON-LD
-
-| Expectation | Summary | Status |
-| --- | --- | --- |
-| base-simple-url | The `@base`, if any, is a simple URL: a host, no user<br>info, dot segments, query or fragment, only URL<br>characters, and a final `/` | ✅ met |
-| base-web-scheme | The `@base`, if any, uses the `https` or `http` scheme | ✅ met |
-| disallowed-context-keywords-absent | No member of an `@context` is a keyword other than `@base`;<br>what a term definition holds is not a member of the<br>`@context` | ✅ met |
-| disallowed-node-keywords-absent | No keyword outside the `@context` other than `@context`,<br>`@graph`, `@id` and `@type` | ✅ met |
-| prefix-namespaces-terminated | Every prefix maps to an absolute IRI ending in `#` or `/` | ✅ met |
-| root-context-and-graph-only | A JSON object with an `@context`, an `@graph`, and nothing<br>else | ✅ met |
-
-Assessment status: ✅ met
-
-### Tier 4 — STANDALONE-TRO
-
-| Expectation | Summary | Status |
-| --- | --- | --- |
-| composition-fingerprinted | The TRO's composition, if any, carries a fingerprint | ✅ met |
-| hashes-well-formed | The TRO's artifact and fingerprint hashes are<br>well-formed sha256 | ❌ not met |
-| tro-assembled-by-trs | The TRO names its assembling system, typed as a TRS | ✅ met |
-| tro-top-level-in-graph | The TRO is a top-level member of the `@graph` | ✅ met |
-| trov-terms-known | Every `trov:` name is one TROV defines | ✅ met |
-
-Assessment status: ❌ not met
-
-### Tier 5 — LINKABLE-TRO
-
-| Expectation | Summary | Status |
-| --- | --- | --- |
-| *base-declared* | *The `@context` includes an `@base`* | *not claimed* |
-| *node-ids-present* | *Every node carries an explicit `@id`* | *not claimed* |
-
-Assessment status: *not claimed*
+<table>
+<thead>
+<tr><th align="left">Expectation</th><th align="left">Summary</th><th align="left">Status</th></tr>
+</thead>
+<tbody>
+<tr><th colspan="2" align="left">Tier 1 — SAFE-JSON</th><th align="left">✅ met</th></tr>
+<tr><td>duplicate-member-names-absent</td><td>No object repeats a member name</td><td>✅ met</td></tr>
+<tr><td>json-parses</td><td>The candidate parses as JSON without errors</td><td>✅ met</td></tr>
+<tr><td>lone-surrogates-absent</td><td>No string or member name has an unpaired surrogate</td><td>✅ met</td></tr>
+<tr><td>numbers-within-range</td><td>Every number fits a double; every integer is exact</td><td>✅ met</td></tr>
+<tr><td>utf8-encoded</td><td>The candidate is UTF-8</td><td>✅ met</td></tr>
+<tr><th colspan="2" align="left">Tier 2 — SAFE-JSON-LD</th><th align="left">✅ met</th></tr>
+<tr><td>containers-absent</td><td>No <code>@container</code> in a term definition</td><td>✅ met</td></tr>
+<tr><td>context-at-root-only</td><td>The document's only <code>@context</code> is the one at its root: no node below it and no term definition within it carries another</td><td>✅ met</td></tr>
+<tr><td>context-protection-absent</td><td>No <code>@protected</code>, <code>@propagate</code> or <code>@import</code> in a context</td><td>✅ met</td></tr>
+<tr><td>context-well-formed</td><td>The root <code>@context</code>, if any, has a form JSON-LD allows</td><td>✅ met</td></tr>
+<tr><td>graph-at-root-only</td><td><code>@graph</code> appears only at the root</td><td>✅ met</td></tr>
+<tr><td>graph-well-formed</td><td>The root <code>@graph</code>, if any, holds objects, not bare values</td><td>✅ met</td></tr>
+<tr><td>id-coercion-absent</td><td>No <code>"@type": "@id"</code> in a term definition</td><td>✅ met</td></tr>
+<tr><td>ids-and-types-strings</td><td>Every <code>@id</code> is a string; every <code>@type</code> a string or an array of strings</td><td>✅ met</td></tr>
+<tr><td>relative-ids-plain</td><td>Every relative <code>@id</code> is a plain path, with no leading <code>/</code> or <code>@</code>, no <code>.</code> or <code>..</code> segments, and no <code>?</code> or <code>#</code></td><td>✅ met</td></tr>
+<tr><td>vocab-absent</td><td>No <code>@vocab</code> in a context</td><td>✅ met</td></tr>
+<tr><th colspan="2" align="left">Tier 3 — TRACE-JSON-LD</th><th align="left">✅ met</th></tr>
+<tr><td>base-simple-url</td><td>The <code>@base</code>, if any, is a simple URL: a host, no user info, dot segments, query or fragment, only URL characters, and a final <code>/</code></td><td>✅ met</td></tr>
+<tr><td>base-web-scheme</td><td>The <code>@base</code>, if any, uses the <code>https</code> or <code>http</code> scheme</td><td>✅ met</td></tr>
+<tr><td>disallowed-context-keywords-absent</td><td>No member of an <code>@context</code> is a keyword other than <code>@base</code>; what a term definition holds is not a member of the <code>@context</code></td><td>✅ met</td></tr>
+<tr><td>disallowed-node-keywords-absent</td><td>No keyword outside the <code>@context</code> other than <code>@context</code>, <code>@graph</code>, <code>@id</code> and <code>@type</code></td><td>✅ met</td></tr>
+<tr><td>prefix-namespaces-terminated</td><td>Every prefix maps to an absolute IRI ending in <code>#</code> or <code>/</code></td><td>✅ met</td></tr>
+<tr><td>root-context-and-graph-only</td><td>A JSON object with an <code>@context</code>, an <code>@graph</code>, and nothing else</td><td>✅ met</td></tr>
+<tr><th colspan="2" align="left">Tier 4 — STANDALONE-TRO</th><th align="left">❌ not met</th></tr>
+<tr><td>composition-fingerprinted</td><td>The TRO's composition, if any, carries a fingerprint</td><td>✅ met</td></tr>
+<tr><td>hashes-well-formed</td><td>The TRO's artifact and fingerprint hashes are well-formed sha256</td><td>❌ not met</td></tr>
+<tr><td>tro-assembled-by-trs</td><td>The TRO names its assembling system, typed as a TRS</td><td>✅ met</td></tr>
+<tr><td>tro-top-level-in-graph</td><td>The TRO is a top-level member of the <code>@graph</code></td><td>✅ met</td></tr>
+<tr><td>trov-terms-known</td><td>Every <code>trov:</code> name is one TROV defines</td><td>✅ met</td></tr>
+<tr><th colspan="2" align="left"><em>Tier 5 — LINKABLE-TRO</em></th><th align="left"><em>not claimed</em></th></tr>
+<tr><td><em>base-declared</em></td><td><em>The <code>@context</code> includes an <code>@base</code></em></td><td><em>not claimed</em></td></tr>
+<tr><td><em>node-ids-present</em></td><td><em>Every node carries an explicit <code>@id</code></em></td><td><em>not claimed</em></td></tr>
+</tbody>
+</table>
 
 ## Details
 
@@ -90,9 +75,14 @@ Assessment status: *not claimed*
 
 Expectation details: Each trov:hash on the TRO's artifacts and composition fingerprint names sha256 as its algorithm and carries a value of 64 lowercase hexadecimal digits.
 
-| Found | Where | Expectation not met because |
-| --- | --- | --- |
-| `"aaa1..."` | `/@graph/0/trov:hasComposition/trov:hasArtifact/0/trov:hash/trov:hashValue` | a sha256 value is 64 lowercase hexadecimal digits |
-| `"bbb2..."` | `/@graph/0/trov:hasComposition/trov:hasArtifact/1/trov:hash/trov:hashValue` | a sha256 value is 64 lowercase hexadecimal digits |
-| `"ccc3..."` | `/@graph/0/trov:hasComposition/trov:hasArtifact/2/trov:hash/trov:hashValue` | a sha256 value is 64 lowercase hexadecimal digits |
-| `"a1b2c3d4..."` | `/@graph/0/trov:hasComposition/trov:hasFingerprint/trov:hash/trov:hashValue` | a sha256 value is 64 lowercase hexadecimal digits |
+<table>
+<thead>
+<tr><th align="left">Found</th><th align="left">Where</th><th align="left">Expectation not met because</th></tr>
+</thead>
+<tbody>
+<tr><td><code>"aaa1..."</code></td><td><code>/@graph/0/trov:hasComposition/trov:hasArtifact/0/trov:hash/trov:hashValue</code></td><td>a sha256 value is 64 lowercase hexadecimal digits</td></tr>
+<tr><td><code>"bbb2..."</code></td><td><code>/@graph/0/trov:hasComposition/trov:hasArtifact/1/trov:hash/trov:hashValue</code></td><td>a sha256 value is 64 lowercase hexadecimal digits</td></tr>
+<tr><td><code>"ccc3..."</code></td><td><code>/@graph/0/trov:hasComposition/trov:hasArtifact/2/trov:hash/trov:hashValue</code></td><td>a sha256 value is 64 lowercase hexadecimal digits</td></tr>
+<tr><td><code>"a1b2c3d4..."</code></td><td><code>/@graph/0/trov:hasComposition/trov:hasFingerprint/trov:hash/trov:hashValue</code></td><td>a sha256 value is 64 lowercase hexadecimal digits</td></tr>
+</tbody>
+</table>
