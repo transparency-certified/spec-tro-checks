@@ -22,7 +22,7 @@
 <tr><td>2</td><td>SAFE&#8209;JSON&#8209;LD</td><td>JSON-LD that every supported processor reads the same way</td><td>✅&nbsp;met</td></tr>
 <tr><td>3</td><td>TRACE&#8209;JSON&#8209;LD</td><td>JSON-LD in the restricted form the TRACE Specification defines for TRO declarations</td><td>✅&nbsp;met</td></tr>
 <tr><td>4</td><td>STANDALONE&#8209;TRO</td><td>A TRO declaration with the structure the TRACE Specification requires, whose references resolve within it</td><td>✅&nbsp;met</td></tr>
-<tr><td><em>5</em></td><td><em>LINKABLE&#8209;TRO</em></td><td><em>A TRO declaration whose element identifiers cannot collide with another TRO's</em></td><td><em>not&nbsp;claimed</em></td></tr>
+<tr style="color: var(--vscode-descriptionForeground, #767676)"><td><em>5</em></td><td><em>LINKABLE&#8209;TRO</em></td><td><em>A TRO declaration whose element identifiers cannot collide with another TRO's</em></td><td><em>not&nbsp;claimed</em></td></tr>
 </tbody>
 </table>
 
@@ -64,9 +64,9 @@
 <tr><td>tro-assembled-by-trs</td><td>The TRO names its assembling system, typed as a TRS</td><td>✅&nbsp;met</td></tr>
 <tr><td>tro-top-level-in-graph</td><td>The TRO is a top-level member of the <code>@graph</code></td><td>✅&nbsp;met</td></tr>
 <tr><td>trov-terms-known</td><td>Every <code>trov:</code> name is one TROV defines</td><td>✅&nbsp;met</td></tr>
-<tr><th colspan="3" align="left"><br><em>Tier&nbsp;5&nbsp;—&nbsp;LINKABLE&#8209;TRO&nbsp;&nbsp;not&nbsp;claimed</em></th></tr>
-<tr><th align="left">Expectation</th><th align="left">Summary</th><th align="left">Status</th></tr>
-<tr><td><em>base-declared</em></td><td><em>The <code>@context</code> includes an <code>@base</code></em></td><td><em>not&nbsp;claimed</em></td></tr>
-<tr><td><em>node-ids-present</em></td><td><em>Every node carries an explicit <code>@id</code></em></td><td><em>not&nbsp;claimed</em></td></tr>
+<tr style="color: var(--vscode-descriptionForeground, #767676)"><th colspan="3" align="left"><br><em>Tier&nbsp;5&nbsp;—&nbsp;LINKABLE&#8209;TRO&nbsp;&nbsp;not&nbsp;claimed</em></th></tr>
+<tr style="color: var(--vscode-descriptionForeground, #767676)"><th align="left">Expectation</th><th align="left">Summary</th><th align="left">Status</th></tr>
+<tr style="color: var(--vscode-descriptionForeground, #767676)"><td><em>base-declared</em></td><td><em>The <code>@context</code> includes an <code>@base</code></em></td><td><em>not&nbsp;claimed</em></td></tr>
+<tr style="color: var(--vscode-descriptionForeground, #767676)"><td><em>node-ids-present</em></td><td><em>Every node carries an explicit <code>@id</code></em></td><td><em>not&nbsp;claimed</em></td></tr>
 </tbody>
 </table>
