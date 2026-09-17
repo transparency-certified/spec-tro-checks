@@ -48,8 +48,8 @@
 <tr><td>graph-at-root-only</td><td><code>@graph</code> appears only at the root</td><td>✅&nbsp;met</td></tr>
 <tr><td>graph-well-formed</td><td>The root <code>@graph</code>, if any, holds objects, not bare values</td><td>✅&nbsp;met</td></tr>
 <tr><td>id-coercion-absent</td><td>No <code>"@type": "@id"</code> in a term definition</td><td>✅&nbsp;met</td></tr>
+<tr><td>id-segments-portable</td><td>Every segment of a relative <code>@id</code> is a portable name: letters, digits, dots, hyphens and underscores, beginning and ending with a letter or digit</td><td>✅&nbsp;met</td></tr>
 <tr><td>ids-and-types-strings</td><td>Every <code>@id</code> is a string; every <code>@type</code> a string or an array of strings</td><td>✅&nbsp;met</td></tr>
-<tr><td>relative-ids-plain</td><td>Every relative <code>@id</code> is a plain path, with no leading <code>/</code> or <code>@</code>, no <code>.</code> or <code>..</code> segments, and no <code>?</code> or <code>#</code></td><td>✅&nbsp;met</td></tr>
 <tr><td>vocab-absent</td><td>No <code>@vocab</code> in a context</td><td>✅&nbsp;met</td></tr>
 </tbody>
 <tbody>
@@ -79,6 +79,10 @@
 <tr style="color: var(--vscode-descriptionForeground, #767676)"><th colspan="3" align="left"><br><em>Tier&nbsp;5&nbsp;—&nbsp;LINKABLE&#8209;TRO&nbsp;&nbsp;not&nbsp;claimed</em></th></tr>
 <tr style="color: var(--vscode-descriptionForeground, #767676)"><th align="left">Expectation</th><th align="left">Summary</th><th align="left">Status</th></tr>
 <tr style="color: var(--vscode-descriptionForeground, #767676)"><td><em>base-declared</em></td><td><em>The <code>@context</code> includes an <code>@base</code></em></td><td><em>not&nbsp;claimed</em></td></tr>
+<tr style="color: var(--vscode-descriptionForeground, #767676)"><td><em>base-has-path</em></td><td><em>The <code>@base</code> names something below the host, not the host alone</em></td><td><em>not&nbsp;claimed</em></td></tr>
+<tr style="color: var(--vscode-descriptionForeground, #767676)"><td><em>base-host-lowercase</em></td><td><em>The <code>@base</code> host is lowercase</em></td><td><em>not&nbsp;claimed</em></td></tr>
+<tr style="color: var(--vscode-descriptionForeground, #767676)"><td><em>base-host-ownable</em></td><td><em>The <code>@base</code> host is a domain name the minter could hold, not a reserved or documentation name</em></td><td><em>not&nbsp;claimed</em></td></tr>
+<tr style="color: var(--vscode-descriptionForeground, #767676)"><td><em>blank-node-ids-absent</em></td><td><em>No <code>@id</code> is a blank node identifier</em></td><td><em>not&nbsp;claimed</em></td></tr>
 <tr style="color: var(--vscode-descriptionForeground, #767676)"><td><em>node-ids-present</em></td><td><em>Every node carries an explicit <code>@id</code></em></td><td><em>not&nbsp;claimed</em></td></tr>
 </tbody>
 </table>

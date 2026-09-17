@@ -48,8 +48,8 @@
 <tr><td>graph-at-root-only</td><td><code>@graph</code> appears only at the root</td><td>✅&nbsp;met</td></tr>
 <tr><td>graph-well-formed</td><td>The root <code>@graph</code>, if any, holds objects, not bare values</td><td>✅&nbsp;met</td></tr>
 <tr><td>id-coercion-absent</td><td>No <code>"@type": "@id"</code> in a term definition</td><td>✅&nbsp;met</td></tr>
+<tr><td>id-segments-portable</td><td>Every segment of a relative <code>@id</code> is a portable name: letters, digits, dots, hyphens and underscores, beginning and ending with a letter or digit</td><td>✅&nbsp;met</td></tr>
 <tr><td>ids-and-types-strings</td><td>Every <code>@id</code> is a string; every <code>@type</code> a string or an array of strings</td><td>✅&nbsp;met</td></tr>
-<tr><td>relative-ids-plain</td><td>Every relative <code>@id</code> is a plain path, with no leading <code>/</code> or <code>@</code>, no <code>.</code> or <code>..</code> segments, and no <code>?</code> or <code>#</code></td><td>✅&nbsp;met</td></tr>
 <tr><td>vocab-absent</td><td>No <code>@vocab</code> in a context</td><td>✅&nbsp;met</td></tr>
 </tbody>
 <tbody>
@@ -79,6 +79,10 @@
 <tr><th colspan="3" align="left"><br>Tier&nbsp;5&nbsp;—&nbsp;LINKABLE&#8209;TRO&nbsp;&nbsp;✅&nbsp;met</th></tr>
 <tr><th align="left">Expectation</th><th align="left">Summary</th><th align="left">Status</th></tr>
 <tr><td>base-declared</td><td>The <code>@context</code> includes an <code>@base</code></td><td>✅&nbsp;met</td></tr>
+<tr><td>base-has-path</td><td>The <code>@base</code> names something below the host, not the host alone</td><td>✅&nbsp;met</td></tr>
+<tr><td>base-host-lowercase</td><td>The <code>@base</code> host is lowercase</td><td>✅&nbsp;met</td></tr>
+<tr><td>base-host-ownable</td><td>The <code>@base</code> host is a domain name the minter could hold, not a reserved or documentation name</td><td>✅&nbsp;met</td></tr>
+<tr><td>blank-node-ids-absent</td><td>No <code>@id</code> is a blank node identifier</td><td>✅&nbsp;met</td></tr>
 <tr><td>node-ids-present</td><td>Every node carries an explicit <code>@id</code></td><td>✅&nbsp;met</td></tr>
 </tbody>
 </table>
