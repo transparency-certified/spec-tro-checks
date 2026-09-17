@@ -20,7 +20,7 @@
 <tbody>
 <tr><td>1</td><td>SAFE&#8209;JSON</td><td>JSON that every supported parser reads the same way</td><td>✅&nbsp;met</td></tr>
 <tr><td>2</td><td>SAFE&#8209;JSON&#8209;LD</td><td>JSON-LD that every supported processor reads the same way</td><td>✅&nbsp;met</td></tr>
-<tr><td>3</td><td>TRACE&#8209;JSON&#8209;LD</td><td>JSON-LD in the restricted form the TRACE Specification defines for TRO declarations</td><td>✅&nbsp;met</td></tr>
+<tr><td>3</td><td>TRACE&#8209;JSON&#8209;LD</td><td>JSON-LD in the restricted form the TRACE Specification requires for TRO declarations</td><td>✅&nbsp;met</td></tr>
 <tr><td>4</td><td>STANDALONE&#8209;TRO</td><td>A TRO declaration with the structure the TRACE Specification requires, whose references resolve within it</td><td>✅&nbsp;met</td></tr>
 <tr style="color: var(--vscode-descriptionForeground, #767676)"><td><em>5</em></td><td><em>LINKABLE&#8209;TRO</em></td><td><em>A TRO declaration whose element identifiers cannot collide with another TRO's</em></td><td><em>not&nbsp;claimed</em></td></tr>
 </tbody>
