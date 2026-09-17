@@ -5,7 +5,7 @@
             "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
             "trov": "https://w3id.org/trace/trov/0.1#",
             "schema": "https://schema.org/",
-            "@base": "https://tro.example.org/tro/2f8a1c94-7b3e-4d21-9f6a-0c5e83b7d410/"
+            "@base": "https://transparency-certified.github.io/tro/f5065a18-4a39-4173-b4fc-6925bb3e07a2/"
         }
     ],
     "@graph": [
