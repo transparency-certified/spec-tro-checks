@@ -22,7 +22,7 @@
 <tr><td>2</td><td>SAFE&#8209;JSON&#8209;LD</td><td>JSON-LD that every supported processor reads the same way</td><td>✅&nbsp;met</td></tr>
 <tr><td>3</td><td>TRACE&#8209;JSON&#8209;LD</td><td>JSON-LD in the restricted form the TRACE Specification requires for TRO declarations</td><td>✅&nbsp;met</td></tr>
 <tr><td>4</td><td>STANDALONE&#8209;TRO</td><td>A TRO declaration with the structure the TRACE Specification requires, whose references resolve within it</td><td>❌&nbsp;not&nbsp;met</td></tr>
-<tr><td>5</td><td>LINKABLE&#8209;TRO</td><td>A TRO declaration whose element identifiers cannot collide with another TRO's</td><td>not&nbsp;assessed</td></tr>
+<tr><td>5</td><td>LINKABLE&#8209;TRO</td><td>A TRO declaration whose element identifiers cannot collide with another TRO's</td><td>❌&nbsp;not&nbsp;met</td></tr>
 </tbody>
 </table>
 
@@ -74,8 +74,7 @@
 <tr><td nowrap><code>core-prefixes-pinned</code></td><td><code>trov</code> is declared and is the only prefix for a TROV namespace; <code>rdf</code>, <code>rdfs</code> and <code>schema</code> prefixes, if declared, are the standard ones</td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><code>creators-person-or-organization</code></td><td>The TRO's <code>schema:creator</code>, if present, is a node typed <code>schema:Person</code> or <code>schema:Organization</code>, never a string</td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><code>hash-algorithms-permitted</code></td><td>Every hash names an algorithm TRACE permits: a collision-resistant digest from the SHA-2, SHA-3 or BLAKE families</td><td>✅&nbsp;met</td></tr>
-<tr><td nowrap><code>hash-values-correct-length</code></td><td>Every hash value has the length its algorithm produces</td><td>✅&nbsp;met</td></tr>
-<tr><td nowrap><code>hash-values-lowercase-hex</code></td><td>Every hash carries its value as a string of lowercase hexadecimal digits</td><td>✅&nbsp;met</td></tr>
+<tr><td nowrap><code>hash-values-correct-form</code></td><td>Every hash value is lowercase hexadecimal of the length its algorithm produces</td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><code>mime-types-two-part</code></td><td>Every artifact's <code>trov:mimeType</code> is a string of the form <code>type/subtype</code></td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><code>times-iso-8601</code></td><td>Every <code>trov:startedAtTime</code> and <code>trov:endedAtTime</code> is an ISO 8601 date-time; every <code>schema:dateCreated</code> an ISO 8601 date or date-time</td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><code>times-zoned</code></td><td>Every <code>trov:startedAtTime</code> and <code>trov:endedAtTime</code> carries its time zone</td><td>❌&nbsp;not&nbsp;met</td></tr>
@@ -86,18 +85,18 @@
 <tr><td nowrap><code>trov-version-known</code></td><td>The TRO declares, in <code>trov:vocabularyVersion</code>, a TROV version this checker knows: <code>0.1</code></td><td>✅&nbsp;met</td></tr>
 </tbody>
 <tbody>
-<tr><th colspan="3" align="left"><br>Tier&nbsp;5&nbsp;—&nbsp;LINKABLE&#8209;TRO&nbsp;&nbsp;not&nbsp;assessed</th></tr>
+<tr><th colspan="3" align="left"><br>Tier&nbsp;5&nbsp;—&nbsp;LINKABLE&#8209;TRO&nbsp;&nbsp;❌&nbsp;not&nbsp;met</th></tr>
 <tr><th align="left">Expectation</th><th align="left">Summary</th><th align="left">Status</th></tr>
-<tr><td nowrap><code>base-declared</code></td><td>The <code>@context</code> includes an <code>@base</code></td><td>not&nbsp;assessed</td></tr>
-<tr><td nowrap><code>base-has-path</code></td><td>The <code>@base</code> names something below the host, not the host alone</td><td>not&nbsp;assessed</td></tr>
-<tr><td nowrap><code>base-host-lowercase</code></td><td>The <code>@base</code> host is lowercase</td><td>not&nbsp;assessed</td></tr>
-<tr><td nowrap><code>base-host-ownable</code></td><td>The <code>@base</code> host is a domain name the minter could hold, not a reserved or documentation name</td><td>not&nbsp;assessed</td></tr>
-<tr><td nowrap><code>blank-node-ids-absent</code></td><td>No <code>@id</code> is a blank node identifier</td><td>not&nbsp;assessed</td></tr>
-<tr><td nowrap><code>node-ids-present</code></td><td>Every node carries an explicit <code>@id</code></td><td>not&nbsp;assessed</td></tr>
+<tr><td nowrap><code>base-declared</code></td><td>The <code>@context</code> includes an <code>@base</code></td><td>✅&nbsp;met</td></tr>
+<tr><td nowrap><code>base-has-path</code></td><td>The <code>@base</code> names something below the host, not the host alone</td><td>✅&nbsp;met</td></tr>
+<tr><td nowrap><code>base-host-lowercase</code></td><td>The <code>@base</code> host is lowercase</td><td>✅&nbsp;met</td></tr>
+<tr><td nowrap><code>base-host-ownable</code></td><td>The <code>@base</code> host is a domain name the minter could hold, not a reserved or documentation name</td><td>✅&nbsp;met</td></tr>
+<tr><td nowrap><code>blank-node-ids-absent</code></td><td>No <code>@id</code> is a blank node identifier</td><td>✅&nbsp;met</td></tr>
+<tr><td nowrap><code>node-ids-present</code></td><td>Every node carries an explicit <code>@id</code></td><td>✅&nbsp;met</td></tr>
 </tbody>
 </table>
 
-## Details
+## Diagnostics for Each Unmet Expectation
 
 ### Unmet expectation: times-zoned
 
