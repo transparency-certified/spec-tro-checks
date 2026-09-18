@@ -9,6 +9,6 @@
     },
     "spec-example-2026-04-08-with-node-ids": {
         "target": "LINKABLE-TRO",
-        "description": "The preceding candidate with an `@id` on each of its five remaining bare node objects: `trov:createdWith` and the four `trov:hash` nodes."
+        "description": "The preceding candidate with an `@id` on each of its five remaining bare node objects, `trov:createdWith` and the four `trov:hash` nodes, and a time zone, `Z`, on each of its three times."
     }
 }

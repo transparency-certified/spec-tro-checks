@@ -18,7 +18,7 @@
             "trov:vocabularyVersion": "0.1",
             "schema:name": "Example analysis TRO",
             "schema:description": "TRO from an analysis reading a data file and a script, producing one output",
-            "schema:dateCreated": "2024-06-15T14:30:00",
+            "schema:dateCreated": "2024-06-15T14:30:00Z",
             "trov:wasAssembledBy": {
                 "@id": "trs",
                 "@type": [
@@ -155,8 +155,8 @@
                     "trov:wasConductedBy": {
                         "@id": "trs"
                     },
-                    "trov:startedAtTime": "2024-06-15T14:00:00",
-                    "trov:endedAtTime": "2024-06-15T14:25:00",
+                    "trov:startedAtTime": "2024-06-15T14:00:00Z",
+                    "trov:endedAtTime": "2024-06-15T14:25:00Z",
                     "trov:accessedArrangement": {
                         "@id": "trp/0/binding/0",
                         "@type": "trov:ArrangementBinding",

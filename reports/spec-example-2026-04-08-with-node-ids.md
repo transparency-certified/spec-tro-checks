@@ -5,7 +5,7 @@
 <table>
 <tbody>
 <tr><td>Candidate</td><td nowrap><code>spec-example-2026-04-08-with-node-ids.jsonld</code></td></tr>
-<tr><td>Description</td><td>The preceding candidate with an <code>@id</code> on each of its five remaining bare node objects: <code>trov:createdWith</code> and the four <code>trov:hash</code> nodes.</td></tr>
+<tr><td>Description</td><td>The preceding candidate with an <code>@id</code> on each of its five remaining bare node objects, <code>trov:createdWith</code> and the four <code>trov:hash</code> nodes, and a time zone, <code>Z</code>, on each of its three times.</td></tr>
 <tr><td>Target</td><td>5&nbsp;LINKABLE&#8209;TRO</td></tr>
 <tr><td>Target&nbsp;declared&nbsp;by</td><td>the candidate manifest</td></tr>
 </tbody>
@@ -21,8 +21,8 @@
 <tr><td>1</td><td>SAFE&#8209;JSON</td><td>JSON that every supported parser reads the same way</td><td>✅&nbsp;met</td></tr>
 <tr><td>2</td><td>SAFE&#8209;JSON&#8209;LD</td><td>JSON-LD that every supported processor reads the same way</td><td>✅&nbsp;met</td></tr>
 <tr><td>3</td><td>TRACE&#8209;JSON&#8209;LD</td><td>JSON-LD in the restricted form the TRACE Specification requires for TRO declarations</td><td>✅&nbsp;met</td></tr>
-<tr><td>4</td><td>STANDALONE&#8209;TRO</td><td>A TRO declaration with the structure the TRACE Specification requires, whose references resolve within it</td><td>❌&nbsp;not&nbsp;met</td></tr>
-<tr><td>5</td><td>LINKABLE&#8209;TRO</td><td>A TRO declaration whose element identifiers cannot collide with another TRO's</td><td>❌&nbsp;not&nbsp;met</td></tr>
+<tr><td>4</td><td>STANDALONE&#8209;TRO</td><td>A TRO declaration with the structure the TRACE Specification requires, whose references resolve within it</td><td>✅&nbsp;met</td></tr>
+<tr><td>5</td><td>LINKABLE&#8209;TRO</td><td>A TRO declaration whose element identifiers cannot collide with another TRO's</td><td>✅&nbsp;met</td></tr>
 </tbody>
 </table>
 
@@ -66,7 +66,7 @@
 <tr><td nowrap><code>types-prefixed-or-absolute</code></td><td>Every <code>@type</code> value is a prefixed or absolute IRI, never a bare name</td><td>✅&nbsp;met</td></tr>
 </tbody>
 <tbody>
-<tr><th colspan="3" align="left"><br>Tier&nbsp;4&nbsp;—&nbsp;STANDALONE&#8209;TRO&nbsp;&nbsp;❌&nbsp;not&nbsp;met</th></tr>
+<tr><th colspan="3" align="left"><br>Tier&nbsp;4&nbsp;—&nbsp;STANDALONE&#8209;TRO&nbsp;&nbsp;✅&nbsp;met</th></tr>
 <tr><th align="left">Expectation</th><th align="left">Summary</th><th align="left">Status</th></tr>
 <tr><td nowrap><code>artifact-hashes-present</code></td><td>Every artifact in the composition carries a <code>trov:hash</code>, one hash or an array of at least one</td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><code>composition-has-fingerprint</code></td><td>The TRO's composition, if any, carries one fingerprint, which carries one hash</td><td>✅&nbsp;met</td></tr>
@@ -77,7 +77,7 @@
 <tr><td nowrap><code>hash-values-correct-form</code></td><td>Every hash value is lowercase hexadecimal of the length its algorithm produces</td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><code>mime-types-two-part</code></td><td>Every artifact's <code>trov:mimeType</code> is a string of the form <code>type/subtype</code></td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><code>times-iso-8601</code></td><td>Every <code>trov:startedAtTime</code> and <code>trov:endedAtTime</code> is an ISO 8601 date-time; every <code>schema:dateCreated</code> an ISO 8601 date or date-time</td><td>✅&nbsp;met</td></tr>
-<tr><td nowrap><code>times-zoned</code></td><td>Every <code>trov:startedAtTime</code> and <code>trov:endedAtTime</code> carries its time zone</td><td>❌&nbsp;not&nbsp;met</td></tr>
+<tr><td nowrap><code>times-zoned</code></td><td>Every <code>trov:startedAtTime</code> and <code>trov:endedAtTime</code> carries its time zone</td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><code>tro-assembled-by-trs</code></td><td>The TRO names its assembling system, typed as a TRS</td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><code>tro-name-description-text</code></td><td>The TRO's <code>schema:name</code> and <code>schema:description</code>, if present, are Text: a string or an array of strings</td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><code>tro-top-level-in-graph</code></td><td>The TRO is a top-level member of the <code>@graph</code></td><td>✅&nbsp;met</td></tr>
@@ -85,7 +85,7 @@
 <tr><td nowrap><code>trov-version-known</code></td><td>The TRO declares, in <code>trov:vocabularyVersion</code>, a TROV version this checker knows: <code>0.1</code></td><td>✅&nbsp;met</td></tr>
 </tbody>
 <tbody>
-<tr><th colspan="3" align="left"><br>Tier&nbsp;5&nbsp;—&nbsp;LINKABLE&#8209;TRO&nbsp;&nbsp;❌&nbsp;not&nbsp;met</th></tr>
+<tr><th colspan="3" align="left"><br>Tier&nbsp;5&nbsp;—&nbsp;LINKABLE&#8209;TRO&nbsp;&nbsp;✅&nbsp;met</th></tr>
 <tr><th align="left">Expectation</th><th align="left">Summary</th><th align="left">Status</th></tr>
 <tr><td nowrap><code>base-declared</code></td><td>The <code>@context</code> includes an <code>@base</code></td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><code>base-has-path</code></td><td>The <code>@base</code> names something below the host, not the host alone</td><td>✅&nbsp;met</td></tr>
@@ -93,21 +93,5 @@
 <tr><td nowrap><code>base-host-ownable</code></td><td>The <code>@base</code> host is a domain name the minter could hold, not a reserved or documentation name</td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><code>blank-node-ids-absent</code></td><td>No <code>@id</code> is a blank node identifier</td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><code>node-ids-present</code></td><td>Every node carries an explicit <code>@id</code></td><td>✅&nbsp;met</td></tr>
-</tbody>
-</table>
-
-## Diagnostics for Each Unmet Expectation
-
-### Unmet expectation: times-zoned
-
-Expectation details: Every trov:startedAtTime and trov:endedAtTime carries its time zone: Z, or an offset of the form +hh:mm or -hh:mm.
-
-<table>
-<thead>
-<tr><th align="left">Found</th><th align="left">Where</th><th align="left">Expectation not met because</th></tr>
-</thead>
-<tbody>
-<tr><td nowrap><code>"2024-06-15T14:25:00"</code></td><td nowrap><code>/@graph/0/trov:hasPerformance/0/trov:endedAtTime</code></td><td>a time carries its zone: Z, or an offset +hh:mm or -hh:mm</td></tr>
-<tr><td nowrap><code>"2024-06-15T14:00:00"</code></td><td nowrap><code>/@graph/0/trov:hasPerformance/0/trov:startedAtTime</code></td><td>a time carries its zone: Z, or an offset +hh:mm or -hh:mm</td></tr>
 </tbody>
 </table>
