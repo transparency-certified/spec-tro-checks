@@ -72,7 +72,7 @@
 <tr><th align="left">Expectation</th><th align="left">Summary</th><th align="left">Status</th></tr>
 <tr><td nowrap><samp>core-prefixes-pinned</samp></td><td><code>trov</code> is declared and is the only prefix for a TROV namespace; <code>rdf</code>, <code>rdfs</code> and <code>schema</code> prefixes, if declared, are the standard ones</td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><samp>trov-terms-known</samp></td><td>Every <code>trov:</code> name is one TROV defines</td><td>✅&nbsp;met</td></tr>
-<tr><td nowrap><samp>trov-version-known</samp></td><td>The TRO declares, in <code>trov:vocabularyVersion</code>, a TROV version this checker knows: <code>0.1</code></td><td>✅&nbsp;met</td></tr>
+<tr><td nowrap><samp>trov-version-known</samp></td><td>The TRO declares, in <code>trov:vocabularyVersion</code>, a released version of TROV</td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><samp>hash-algorithms-permitted</samp></td><td>Every hash names an algorithm TRACE permits: a collision-resistant digest from the SHA-2, SHA-3 or BLAKE families</td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><samp>hash-values-correct-form</samp></td><td>Every hash value is lowercase hexadecimal of the length its algorithm produces</td><td>❌&nbsp;not&nbsp;met</td></tr>
 <tr><td nowrap><samp>mime-types-two-part</samp></td><td>Every artifact's <code>trov:mimeType</code> is a string of the form <code>type/subtype</code></td><td>✅&nbsp;met</td></tr>
@@ -123,25 +123,31 @@
 
 Expectation details: Every trov:hash on the TRO's artifacts and composition fingerprint carries its value in trov:hashValue as its algorithm writes one: lowercase hexadecimal digits, 64 of them for sha256, sha3-256, blake2s and blake3; 96 for sha384 and sha3-384; 128 for sha512, sha3-512 and blake2b.
 
+Found in 4 places, each breaking the rule shown.
+
 <table>
-<thead>
-<tr><th align="left">Found</th><th align="left">Expectation not met because</th></tr>
-</thead>
 <tbody>
-<tr><td nowrap><samp>"aaa1..."</samp></td><td>a sha256 value is 64 lowercase hexadecimal digits</td></tr>
-<tr><td colspan="2">Where: <samp>/<wbr>@graph/<wbr>0/<wbr>trov:hasComposition/<wbr>trov:hasArtifact/<wbr>0/<wbr>trov:hash/<wbr>trov:hashValue</samp></td></tr>
+<tr><th align="left">Rule</th><td>a sha256 value is 64 lowercase hexadecimal digits</td></tr>
+<tr><th align="left">Found</th><td nowrap><samp>"aaa1..."</samp></td></tr>
+<tr><th align="left">Where</th><td><samp>/<wbr>@graph/<wbr>0/<wbr>trov:hasComposition/<wbr>trov:hasArtifact/<wbr>0/<wbr>trov:hash/<wbr>trov:hashValue</samp></td></tr>
 </tbody>
+<tbody><tr><td colspan="2">&nbsp;</td></tr></tbody>
 <tbody>
-<tr><td nowrap><samp>"bbb2..."</samp></td><td>a sha256 value is 64 lowercase hexadecimal digits</td></tr>
-<tr><td colspan="2">Where: <samp>/<wbr>@graph/<wbr>0/<wbr>trov:hasComposition/<wbr>trov:hasArtifact/<wbr>1/<wbr>trov:hash/<wbr>trov:hashValue</samp></td></tr>
+<tr><th align="left">Rule</th><td>a sha256 value is 64 lowercase hexadecimal digits</td></tr>
+<tr><th align="left">Found</th><td nowrap><samp>"bbb2..."</samp></td></tr>
+<tr><th align="left">Where</th><td><samp>/<wbr>@graph/<wbr>0/<wbr>trov:hasComposition/<wbr>trov:hasArtifact/<wbr>1/<wbr>trov:hash/<wbr>trov:hashValue</samp></td></tr>
 </tbody>
+<tbody><tr><td colspan="2">&nbsp;</td></tr></tbody>
 <tbody>
-<tr><td nowrap><samp>"ccc3..."</samp></td><td>a sha256 value is 64 lowercase hexadecimal digits</td></tr>
-<tr><td colspan="2">Where: <samp>/<wbr>@graph/<wbr>0/<wbr>trov:hasComposition/<wbr>trov:hasArtifact/<wbr>2/<wbr>trov:hash/<wbr>trov:hashValue</samp></td></tr>
+<tr><th align="left">Rule</th><td>a sha256 value is 64 lowercase hexadecimal digits</td></tr>
+<tr><th align="left">Found</th><td nowrap><samp>"ccc3..."</samp></td></tr>
+<tr><th align="left">Where</th><td><samp>/<wbr>@graph/<wbr>0/<wbr>trov:hasComposition/<wbr>trov:hasArtifact/<wbr>2/<wbr>trov:hash/<wbr>trov:hashValue</samp></td></tr>
 </tbody>
+<tbody><tr><td colspan="2">&nbsp;</td></tr></tbody>
 <tbody>
-<tr><td nowrap><samp>"a1b2c3d4..."</samp></td><td>a sha256 value is 64 lowercase hexadecimal digits</td></tr>
-<tr><td colspan="2">Where: <samp>/<wbr>@graph/<wbr>0/<wbr>trov:hasComposition/<wbr>trov:hasFingerprint/<wbr>trov:hash/<wbr>trov:hashValue</samp></td></tr>
+<tr><th align="left">Rule</th><td>a sha256 value is 64 lowercase hexadecimal digits</td></tr>
+<tr><th align="left">Found</th><td nowrap><samp>"a1b2c3d4..."</samp></td></tr>
+<tr><th align="left">Where</th><td><samp>/<wbr>@graph/<wbr>0/<wbr>trov:hasComposition/<wbr>trov:hasFingerprint/<wbr>trov:hash/<wbr>trov:hashValue</samp></td></tr>
 </tbody>
 </table>
 
@@ -149,17 +155,19 @@ Expectation details: Every trov:hash on the TRO's artifacts and composition fing
 
 Expectation details: Every trov:startedAtTime and trov:endedAtTime carries its time zone: Z, or an offset of the form +hh:mm or -hh:mm.
 
+Found in 2 places, each breaking the rule shown.
+
 <table>
-<thead>
-<tr><th align="left">Found</th><th align="left">Expectation not met because</th></tr>
-</thead>
 <tbody>
-<tr><td nowrap><samp>"2024-06-15T14:25:00"</samp></td><td>a time carries its zone: Z, or an offset +hh:mm or -hh:mm</td></tr>
-<tr><td colspan="2">Where: <samp>/<wbr>@graph/<wbr>0/<wbr>trov:hasPerformance/<wbr>0/<wbr>trov:endedAtTime</samp></td></tr>
+<tr><th align="left">Rule</th><td>a time carries its zone: Z, or an offset +hh:mm or -hh:mm</td></tr>
+<tr><th align="left">Found</th><td nowrap><samp>"2024-06-15T14:25:00"</samp></td></tr>
+<tr><th align="left">Where</th><td><samp>/<wbr>@graph/<wbr>0/<wbr>trov:hasPerformance/<wbr>0/<wbr>trov:endedAtTime</samp></td></tr>
 </tbody>
+<tbody><tr><td colspan="2">&nbsp;</td></tr></tbody>
 <tbody>
-<tr><td nowrap><samp>"2024-06-15T14:00:00"</samp></td><td>a time carries its zone: Z, or an offset +hh:mm or -hh:mm</td></tr>
-<tr><td colspan="2">Where: <samp>/<wbr>@graph/<wbr>0/<wbr>trov:hasPerformance/<wbr>0/<wbr>trov:startedAtTime</samp></td></tr>
+<tr><th align="left">Rule</th><td>a time carries its zone: Z, or an offset +hh:mm or -hh:mm</td></tr>
+<tr><th align="left">Found</th><td nowrap><samp>"2024-06-15T14:00:00"</samp></td></tr>
+<tr><th align="left">Where</th><td><samp>/<wbr>@graph/<wbr>0/<wbr>trov:hasPerformance/<wbr>0/<wbr>trov:startedAtTime</samp></td></tr>
 </tbody>
 </table>
 
@@ -167,13 +175,13 @@ Expectation details: Every trov:startedAtTime and trov:endedAtTime carries its t
 
 Expectation details: The @id of the TRS the document defines is an absolute IRI, or a compact IRI whose prefix is not trov, so that it is the same wherever the TRS is defined.
 
+Found in 1 place, breaking the rule shown.
+
 <table>
-<thead>
-<tr><th align="left">Found</th><th align="left">Expectation not met because</th></tr>
-</thead>
 <tbody>
-<tr><td nowrap><samp>"trs"</samp></td><td>"trs" is not an absolute IRI; a TRS is identified by an absolute IRI, or by a compact IRI outside the trov namespace</td></tr>
-<tr><td colspan="2">Where: <samp>/<wbr>@graph/<wbr>0/<wbr>trov:wasAssembledBy/<wbr>@id</samp></td></tr>
+<tr><th align="left">Rule</th><td>a TRS is identified by an absolute IRI, or by a compact IRI outside the trov namespace</td></tr>
+<tr><th align="left">Found</th><td nowrap><samp>"trs"</samp></td></tr>
+<tr><th align="left">Where</th><td><samp>/<wbr>@graph/<wbr>0/<wbr>trov:wasAssembledBy/<wbr>@id</samp></td></tr>
 </tbody>
 </table>
 
@@ -181,13 +189,13 @@ Expectation details: The @id of the TRS the document defines is an absolute IRI,
 
 Expectation details: Every value of trov:hasCapability that carries an @id carries an absolute IRI, or a compact IRI whose prefix is not trov.
 
+Found in 1 place, breaking the rule shown.
+
 <table>
-<thead>
-<tr><th align="left">Found</th><th align="left">Expectation not met because</th></tr>
-</thead>
 <tbody>
-<tr><td nowrap><samp>"trs/capability/0"</samp></td><td>"trs/capability/0" is not an absolute IRI; a capability is identified by an absolute IRI, or by a compact IRI outside the trov namespace</td></tr>
-<tr><td colspan="2">Where: <samp>/<wbr>@graph/<wbr>0/<wbr>trov:wasAssembledBy/<wbr>trov:hasCapability/<wbr>0/<wbr>@id</samp></td></tr>
+<tr><th align="left">Rule</th><td>a capability is identified by an absolute IRI, or by a compact IRI outside the trov namespace</td></tr>
+<tr><th align="left">Found</th><td nowrap><samp>"trs/capability/0"</samp></td></tr>
+<tr><th align="left">Where</th><td><samp>/<wbr>@graph/<wbr>0/<wbr>trov:wasAssembledBy/<wbr>trov:hasCapability/<wbr>0/<wbr>@id</samp></td></tr>
 </tbody>
 </table>
 
@@ -195,12 +203,12 @@ Expectation details: Every value of trov:hasCapability that carries an @id carri
 
 Expectation details: Every trov:warrantedBy on a value of trov:hasPerformanceAttribute refers to its capability by an absolute IRI, or a compact IRI whose prefix is not trov.
 
+Found in 1 place, breaking the rule shown.
+
 <table>
-<thead>
-<tr><th align="left">Found</th><th align="left">Expectation not met because</th></tr>
-</thead>
 <tbody>
-<tr><td nowrap><samp>"trs/capability/0"</samp></td><td>"trs/capability/0" is not an absolute IRI; a performance attribute's warrant refers to its capability by the capability's absolute IRI</td></tr>
-<tr><td colspan="2">Where: <samp>/<wbr>@graph/<wbr>0/<wbr>trov:hasPerformance/<wbr>0/<wbr>trov:hasPerformanceAttribute/<wbr>0/<wbr>trov:warrantedBy/<wbr>@id</samp></td></tr>
+<tr><th align="left">Rule</th><td>a performance attribute's warrant refers to its capability by absolute IRI, or by a compact IRI outside the trov namespace</td></tr>
+<tr><th align="left">Found</th><td nowrap><samp>"trs/capability/0"</samp></td></tr>
+<tr><th align="left">Where</th><td><samp>/<wbr>@graph/<wbr>0/<wbr>trov:hasPerformance/<wbr>0/<wbr>trov:hasPerformanceAttribute/<wbr>0/<wbr>trov:warrantedBy/<wbr>@id</samp></td></tr>
 </tbody>
 </table>
