@@ -125,10 +125,11 @@ Expectation details: The @id of the TRS the document defines is an absolute IRI,
 
 <table>
 <thead>
-<tr><th align="left">Found</th><th align="left">Where</th><th align="left">Expectation not met because</th></tr>
+<tr><th align="left">Found</th><th align="left">Expectation not met because</th></tr>
 </thead>
 <tbody>
-<tr><td nowrap><samp>"trs"</samp></td><td><samp>/<wbr>@graph/<wbr>0/<wbr>trov:wasAssembledBy/<wbr>@id</samp></td><td>"trs" is not an absolute IRI; a TRS is identified by an absolute IRI, or by a compact IRI outside the trov namespace</td></tr>
+<tr><td nowrap><samp>"trs"</samp></td><td>"trs" is not an absolute IRI; a TRS is identified by an absolute IRI, or by a compact IRI outside the trov namespace</td></tr>
+<tr><td colspan="2">Where: <samp>/<wbr>@graph/<wbr>0/<wbr>trov:wasAssembledBy/<wbr>@id</samp></td></tr>
 </tbody>
 </table>
 
@@ -138,10 +139,11 @@ Expectation details: Every value of trov:hasCapability that carries an @id carri
 
 <table>
 <thead>
-<tr><th align="left">Found</th><th align="left">Where</th><th align="left">Expectation not met because</th></tr>
+<tr><th align="left">Found</th><th align="left">Expectation not met because</th></tr>
 </thead>
 <tbody>
-<tr><td nowrap><samp>"trs/capability/0"</samp></td><td><samp>/<wbr>@graph/<wbr>0/<wbr>trov:wasAssembledBy/<wbr>trov:hasCapability/<wbr>0/<wbr>@id</samp></td><td>"trs/capability/0" is not an absolute IRI; a capability is identified by an absolute IRI, or by a compact IRI outside the trov namespace</td></tr>
+<tr><td nowrap><samp>"trs/capability/0"</samp></td><td>"trs/capability/0" is not an absolute IRI; a capability is identified by an absolute IRI, or by a compact IRI outside the trov namespace</td></tr>
+<tr><td colspan="2">Where: <samp>/<wbr>@graph/<wbr>0/<wbr>trov:wasAssembledBy/<wbr>trov:hasCapability/<wbr>0/<wbr>@id</samp></td></tr>
 </tbody>
 </table>
 
@@ -151,9 +153,10 @@ Expectation details: Every trov:warrantedBy on a value of trov:hasPerformanceAtt
 
 <table>
 <thead>
-<tr><th align="left">Found</th><th align="left">Where</th><th align="left">Expectation not met because</th></tr>
+<tr><th align="left">Found</th><th align="left">Expectation not met because</th></tr>
 </thead>
 <tbody>
-<tr><td nowrap><samp>"trs/capability/0"</samp></td><td><samp>/<wbr>@graph/<wbr>0/<wbr>trov:hasPerformance/<wbr>0/<wbr>trov:hasPerformanceAttribute/<wbr>0/<wbr>trov:warrantedBy/<wbr>@id</samp></td><td>"trs/capability/0" is not an absolute IRI; a performance attribute's warrant refers to its capability by the capability's absolute IRI</td></tr>
+<tr><td nowrap><samp>"trs/capability/0"</samp></td><td>"trs/capability/0" is not an absolute IRI; a performance attribute's warrant refers to its capability by the capability's absolute IRI</td></tr>
+<tr><td colspan="2">Where: <samp>/<wbr>@graph/<wbr>0/<wbr>trov:hasPerformance/<wbr>0/<wbr>trov:hasPerformanceAttribute/<wbr>0/<wbr>trov:warrantedBy/<wbr>@id</samp></td></tr>
 </tbody>
 </table>
