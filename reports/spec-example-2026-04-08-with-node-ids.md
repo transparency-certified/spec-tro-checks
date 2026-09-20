@@ -128,7 +128,7 @@ Expectation unmet in 1 place:
 <table>
 <tbody>
 <tr><th align="left">Rule</th><td>a TRS is identified by an absolute IRI, or by a compact IRI outside the trov namespace</td></tr>
-<tr><th align="left">Problem</th><td>expected to match pattern <code>^(?!trov:)(?!_:)[A-Za-z][A-Za-z0-9+.-]*:</code></td></tr>
+<tr><th align="left">Problem</th><td>the <code>@id</code> of <code>trov:wasAssembledBy</code> was expected to match pattern <code>^(?!trov:)(?!_:)[A-Za-z][A-Za-z0-9+.-]*:</code></td></tr>
 <tr><th align="left">Found</th><td nowrap><samp>"trs"</samp></td></tr>
 <tr><th align="left">Where</th><td><samp>/<wbr>@graph/<wbr>0/<wbr>trov:wasAssembledBy/<wbr>@id</samp></td></tr>
 </tbody>
@@ -143,7 +143,7 @@ Expectation unmet in 1 place:
 <table>
 <tbody>
 <tr><th align="left">Rule</th><td>a capability is identified by an absolute IRI, or by a compact IRI outside the trov namespace</td></tr>
-<tr><th align="left">Problem</th><td>expected to match pattern <code>^(?!trov:)(?!_:)[A-Za-z][A-Za-z0-9+.-]*:</code></td></tr>
+<tr><th align="left">Problem</th><td>the <code>@id</code> of <code>trov:hasCapability</code> 0 was expected to match pattern <code>^(?!trov:)(?!_:)[A-Za-z][A-Za-z0-9+.-]*:</code></td></tr>
 <tr><th align="left">Found</th><td nowrap><samp>"trs/capability/0"</samp></td></tr>
 <tr><th align="left">Where</th><td><samp>/<wbr>@graph/<wbr>0/<wbr>trov:wasAssembledBy/<wbr>trov:hasCapability/<wbr>0/<wbr>@id</samp></td></tr>
 </tbody>
@@ -158,7 +158,7 @@ Expectation unmet in 1 place:
 <table>
 <tbody>
 <tr><th align="left">Rule</th><td>a performance attribute's warrant refers to its capability by absolute IRI, or by a compact IRI outside the trov namespace</td></tr>
-<tr><th align="left">Problem</th><td>expected to match pattern <code>^(?!trov:)(?!_:)[A-Za-z][A-Za-z0-9+.-]*:</code></td></tr>
+<tr><th align="left">Problem</th><td>the <code>@id</code> of <code>trov:warrantedBy</code> was expected to match pattern <code>^(?!trov:)(?!_:)[A-Za-z][A-Za-z0-9+.-]*:</code></td></tr>
 <tr><th align="left">Found</th><td nowrap><samp>"trs/capability/0"</samp></td></tr>
 <tr><th align="left">Where</th><td><samp>/<wbr>@graph/<wbr>0/<wbr>trov:hasPerformance/<wbr>0/<wbr>trov:hasPerformanceAttribute/<wbr>0/<wbr>trov:warrantedBy/<wbr>@id</samp></td></tr>
 </tbody>

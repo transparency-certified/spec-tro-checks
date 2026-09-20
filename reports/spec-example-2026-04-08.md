@@ -128,28 +128,28 @@ Expectation unmet in 4 places:
 <table>
 <tbody>
 <tr><th align="left">Rule</th><td>a sha256 value is 64 lowercase hexadecimal digits</td></tr>
-<tr><th align="left">Problem</th><td>expected to match pattern <code>^[0-9a-f]{64}$(?!\n)</code></td></tr>
+<tr><th align="left">Problem</th><td><code>trov:hashValue</code> was expected to match pattern <code>^[0-9a-f]{64}$(?!\n)</code></td></tr>
 <tr><th align="left">Found</th><td nowrap><samp>"aaa1..."</samp></td></tr>
 <tr><th align="left">Where</th><td><samp>/<wbr>@graph/<wbr>0/<wbr>trov:hasComposition/<wbr>trov:hasArtifact/<wbr>0/<wbr>trov:hash/<wbr>trov:hashValue</samp></td></tr>
 </tbody>
 <tbody><tr><td colspan="2">&nbsp;</td></tr></tbody>
 <tbody>
 <tr><th align="left">Rule</th><td>a sha256 value is 64 lowercase hexadecimal digits</td></tr>
-<tr><th align="left">Problem</th><td>expected to match pattern <code>^[0-9a-f]{64}$(?!\n)</code></td></tr>
+<tr><th align="left">Problem</th><td><code>trov:hashValue</code> was expected to match pattern <code>^[0-9a-f]{64}$(?!\n)</code></td></tr>
 <tr><th align="left">Found</th><td nowrap><samp>"bbb2..."</samp></td></tr>
 <tr><th align="left">Where</th><td><samp>/<wbr>@graph/<wbr>0/<wbr>trov:hasComposition/<wbr>trov:hasArtifact/<wbr>1/<wbr>trov:hash/<wbr>trov:hashValue</samp></td></tr>
 </tbody>
 <tbody><tr><td colspan="2">&nbsp;</td></tr></tbody>
 <tbody>
 <tr><th align="left">Rule</th><td>a sha256 value is 64 lowercase hexadecimal digits</td></tr>
-<tr><th align="left">Problem</th><td>expected to match pattern <code>^[0-9a-f]{64}$(?!\n)</code></td></tr>
+<tr><th align="left">Problem</th><td><code>trov:hashValue</code> was expected to match pattern <code>^[0-9a-f]{64}$(?!\n)</code></td></tr>
 <tr><th align="left">Found</th><td nowrap><samp>"ccc3..."</samp></td></tr>
 <tr><th align="left">Where</th><td><samp>/<wbr>@graph/<wbr>0/<wbr>trov:hasComposition/<wbr>trov:hasArtifact/<wbr>2/<wbr>trov:hash/<wbr>trov:hashValue</samp></td></tr>
 </tbody>
 <tbody><tr><td colspan="2">&nbsp;</td></tr></tbody>
 <tbody>
 <tr><th align="left">Rule</th><td>a sha256 value is 64 lowercase hexadecimal digits</td></tr>
-<tr><th align="left">Problem</th><td>expected to match pattern <code>^[0-9a-f]{64}$(?!\n)</code></td></tr>
+<tr><th align="left">Problem</th><td><code>trov:hashValue</code> was expected to match pattern <code>^[0-9a-f]{64}$(?!\n)</code></td></tr>
 <tr><th align="left">Found</th><td nowrap><samp>"a1b2c3d4..."</samp></td></tr>
 <tr><th align="left">Where</th><td><samp>/<wbr>@graph/<wbr>0/<wbr>trov:hasComposition/<wbr>trov:hasFingerprint/<wbr>trov:hash/<wbr>trov:hashValue</samp></td></tr>
 </tbody>
@@ -164,14 +164,14 @@ Expectation unmet in 2 places:
 <table>
 <tbody>
 <tr><th align="left">Rule</th><td>a time carries its zone: Z, or an offset +hh:mm or -hh:mm</td></tr>
-<tr><th align="left">Problem</th><td>expected to match pattern <code>(Z|[+-][0-9]{2}:[0-9]{2})$</code></td></tr>
+<tr><th align="left">Problem</th><td><code>trov:endedAtTime</code> was expected to match pattern <code>(Z|[+-][0-9]{2}:[0-9]{2})$</code></td></tr>
 <tr><th align="left">Found</th><td nowrap><samp>"2024-06-15T14:25:00"</samp></td></tr>
 <tr><th align="left">Where</th><td><samp>/<wbr>@graph/<wbr>0/<wbr>trov:hasPerformance/<wbr>0/<wbr>trov:endedAtTime</samp></td></tr>
 </tbody>
 <tbody><tr><td colspan="2">&nbsp;</td></tr></tbody>
 <tbody>
 <tr><th align="left">Rule</th><td>a time carries its zone: Z, or an offset +hh:mm or -hh:mm</td></tr>
-<tr><th align="left">Problem</th><td>expected to match pattern <code>(Z|[+-][0-9]{2}:[0-9]{2})$</code></td></tr>
+<tr><th align="left">Problem</th><td><code>trov:startedAtTime</code> was expected to match pattern <code>(Z|[+-][0-9]{2}:[0-9]{2})$</code></td></tr>
 <tr><th align="left">Found</th><td nowrap><samp>"2024-06-15T14:00:00"</samp></td></tr>
 <tr><th align="left">Where</th><td><samp>/<wbr>@graph/<wbr>0/<wbr>trov:hasPerformance/<wbr>0/<wbr>trov:startedAtTime</samp></td></tr>
 </tbody>
@@ -186,7 +186,7 @@ Expectation unmet in 1 place:
 <table>
 <tbody>
 <tr><th align="left">Rule</th><td>a TRS is identified by an absolute IRI, or by a compact IRI outside the trov namespace</td></tr>
-<tr><th align="left">Problem</th><td>expected to match pattern <code>^(?!trov:)(?!_:)[A-Za-z][A-Za-z0-9+.-]*:</code></td></tr>
+<tr><th align="left">Problem</th><td>the <code>@id</code> of <code>trov:wasAssembledBy</code> was expected to match pattern <code>^(?!trov:)(?!_:)[A-Za-z][A-Za-z0-9+.-]*:</code></td></tr>
 <tr><th align="left">Found</th><td nowrap><samp>"trs"</samp></td></tr>
 <tr><th align="left">Where</th><td><samp>/<wbr>@graph/<wbr>0/<wbr>trov:wasAssembledBy/<wbr>@id</samp></td></tr>
 </tbody>
@@ -201,7 +201,7 @@ Expectation unmet in 1 place:
 <table>
 <tbody>
 <tr><th align="left">Rule</th><td>a capability is identified by an absolute IRI, or by a compact IRI outside the trov namespace</td></tr>
-<tr><th align="left">Problem</th><td>expected to match pattern <code>^(?!trov:)(?!_:)[A-Za-z][A-Za-z0-9+.-]*:</code></td></tr>
+<tr><th align="left">Problem</th><td>the <code>@id</code> of <code>trov:hasCapability</code> 0 was expected to match pattern <code>^(?!trov:)(?!_:)[A-Za-z][A-Za-z0-9+.-]*:</code></td></tr>
 <tr><th align="left">Found</th><td nowrap><samp>"trs/capability/0"</samp></td></tr>
 <tr><th align="left">Where</th><td><samp>/<wbr>@graph/<wbr>0/<wbr>trov:wasAssembledBy/<wbr>trov:hasCapability/<wbr>0/<wbr>@id</samp></td></tr>
 </tbody>
@@ -216,7 +216,7 @@ Expectation unmet in 1 place:
 <table>
 <tbody>
 <tr><th align="left">Rule</th><td>a performance attribute's warrant refers to its capability by absolute IRI, or by a compact IRI outside the trov namespace</td></tr>
-<tr><th align="left">Problem</th><td>expected to match pattern <code>^(?!trov:)(?!_:)[A-Za-z][A-Za-z0-9+.-]*:</code></td></tr>
+<tr><th align="left">Problem</th><td>the <code>@id</code> of <code>trov:warrantedBy</code> was expected to match pattern <code>^(?!trov:)(?!_:)[A-Za-z][A-Za-z0-9+.-]*:</code></td></tr>
 <tr><th align="left">Found</th><td nowrap><samp>"trs/capability/0"</samp></td></tr>
 <tr><th align="left">Where</th><td><samp>/<wbr>@graph/<wbr>0/<wbr>trov:hasPerformance/<wbr>0/<wbr>trov:hasPerformanceAttribute/<wbr>0/<wbr>trov:warrantedBy/<wbr>@id</samp></td></tr>
 </tbody>
