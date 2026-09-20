@@ -121,9 +121,9 @@
 
 ### Unmet expectation: trs-id-absolute
 
-Expectation details: The @id of the TRS the document defines is an absolute IRI, or a compact IRI whose prefix is not trov, so that it is the same wherever the TRS is defined.
+Detailed expectation: The @id of the TRS the document defines is an absolute IRI, or a compact IRI whose prefix is not trov, so that it is the same wherever the TRS is defined.
 
-Found in 1 place, breaking the rule shown.
+Expectation unmet in 1 place:
 
 <table>
 <tbody>
@@ -136,9 +136,9 @@ Found in 1 place, breaking the rule shown.
 
 ### Unmet expectation: capability-ids-absolute
 
-Expectation details: Every value of trov:hasCapability that carries an @id carries an absolute IRI, or a compact IRI whose prefix is not trov.
+Detailed expectation: Every value of trov:hasCapability that carries an @id carries an absolute IRI, or a compact IRI whose prefix is not trov.
 
-Found in 1 place, breaking the rule shown.
+Expectation unmet in 1 place:
 
 <table>
 <tbody>
@@ -151,9 +151,9 @@ Found in 1 place, breaking the rule shown.
 
 ### Unmet expectation: capability-warrants-absolute
 
-Expectation details: Every trov:warrantedBy on a value of trov:hasPerformanceAttribute refers to its capability by an absolute IRI, or a compact IRI whose prefix is not trov.
+Detailed expectation: Every trov:warrantedBy on a value of trov:hasPerformanceAttribute refers to its capability by an absolute IRI, or a compact IRI whose prefix is not trov.
 
-Found in 1 place, breaking the rule shown.
+Expectation unmet in 1 place:
 
 <table>
 <tbody>

@@ -121,9 +121,9 @@
 
 ### Unmet expectation: hash-values-correct-form
 
-Expectation details: Every trov:hash on the TRO's artifacts and composition fingerprint carries its value in trov:hashValue as its algorithm writes one: lowercase hexadecimal digits, 64 of them for sha256, sha3-256, blake2s and blake3; 96 for sha384 and sha3-384; 128 for sha512, sha3-512 and blake2b.
+Detailed expectation: Every trov:hash on the TRO's artifacts and composition fingerprint carries its value in trov:hashValue as its algorithm writes one: lowercase hexadecimal digits, 64 of them for sha256, sha3-256, blake2s and blake3; 96 for sha384 and sha3-384; 128 for sha512, sha3-512 and blake2b.
 
-Found in 4 places, each breaking the rule shown.
+Expectation unmet in 4 places:
 
 <table>
 <tbody>
@@ -157,9 +157,9 @@ Found in 4 places, each breaking the rule shown.
 
 ### Unmet expectation: times-zoned
 
-Expectation details: Every trov:startedAtTime and trov:endedAtTime carries its time zone: Z, or an offset of the form +hh:mm or -hh:mm.
+Detailed expectation: Every trov:startedAtTime and trov:endedAtTime carries its time zone: Z, or an offset of the form +hh:mm or -hh:mm.
 
-Found in 2 places, each breaking the rule shown.
+Expectation unmet in 2 places:
 
 <table>
 <tbody>
@@ -179,9 +179,9 @@ Found in 2 places, each breaking the rule shown.
 
 ### Unmet expectation: trs-id-absolute
 
-Expectation details: The @id of the TRS the document defines is an absolute IRI, or a compact IRI whose prefix is not trov, so that it is the same wherever the TRS is defined.
+Detailed expectation: The @id of the TRS the document defines is an absolute IRI, or a compact IRI whose prefix is not trov, so that it is the same wherever the TRS is defined.
 
-Found in 1 place, breaking the rule shown.
+Expectation unmet in 1 place:
 
 <table>
 <tbody>
@@ -194,9 +194,9 @@ Found in 1 place, breaking the rule shown.
 
 ### Unmet expectation: capability-ids-absolute
 
-Expectation details: Every value of trov:hasCapability that carries an @id carries an absolute IRI, or a compact IRI whose prefix is not trov.
+Detailed expectation: Every value of trov:hasCapability that carries an @id carries an absolute IRI, or a compact IRI whose prefix is not trov.
 
-Found in 1 place, breaking the rule shown.
+Expectation unmet in 1 place:
 
 <table>
 <tbody>
@@ -209,9 +209,9 @@ Found in 1 place, breaking the rule shown.
 
 ### Unmet expectation: capability-warrants-absolute
 
-Expectation details: Every trov:warrantedBy on a value of trov:hasPerformanceAttribute refers to its capability by an absolute IRI, or a compact IRI whose prefix is not trov.
+Detailed expectation: Every trov:warrantedBy on a value of trov:hasPerformanceAttribute refers to its capability by an absolute IRI, or a compact IRI whose prefix is not trov.
 
-Found in 1 place, breaking the rule shown.
+Expectation unmet in 1 place:
 
 <table>
 <tbody>
