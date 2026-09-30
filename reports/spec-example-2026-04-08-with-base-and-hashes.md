@@ -19,12 +19,12 @@
 </thead>
 <tbody>
 <tr><td>1</td><td>SAFE&#8209;JSON</td><td>JSON that every supported parser reads the same way</td><td>✅&nbsp;met</td></tr>
-<tr><td>2</td><td>SAFE&#8209;JSON&#8209;LD</td><td>JSON-LD that every supported processor reads the same way</td><td>✅&nbsp;met</td></tr>
+<tr><td>2</td><td>SAFE&#8209;JSON&#8209;LD</td><td>JSON-LD that uses only those constructs our supported JSON-LD processors handle consistently</td><td>✅&nbsp;met</td></tr>
 <tr><td>3</td><td>TRACE&#8209;JSON&#8209;LD</td><td>JSON-LD in the restricted form the TRACE Specification requires for TRO declarations</td><td>✅&nbsp;met</td></tr>
 <tr><td>4</td><td>USES&#8209;TROV&#8209;CORRECTLY</td><td>JSON-LD whose TROV terms, and the schema.org terms TROV specifies, are used as they are defined</td><td>❌&nbsp;not&nbsp;met</td></tr>
 <tr><td>5</td><td>DEFINES&#8209;TRS</td><td>JSON-LD that defines a Trusted Research System, identified by an absolute IRI</td><td>❌&nbsp;not&nbsp;met</td></tr>
 <tr><td>6</td><td>STANDALONE&#8209;TRO</td><td>A TRO declaration with the structure the TRACE Specification requires, whose references resolve within it</td><td>❌&nbsp;not&nbsp;met</td></tr>
-<tr style="color: var(--vscode-descriptionForeground, #767676)"><td><em>7</em></td><td><em>LINKABLE&#8209;TRO</em></td><td><em>A TRO declaration whose element identifiers cannot collide with another TRO's</em></td><td><em>not&nbsp;claimed</em></td></tr>
+<tr style="color: var(--vscode-descriptionForeground, #767676)"><td><em>7</em></td><td><em>LINKABLE&#8209;TRO</em></td><td><em>A TRO declaration whose element identifiers cannot collide with those in another TRO</em></td><td><em>not&nbsp;claimed</em></td></tr>
 </tbody>
 </table>
 
@@ -43,29 +43,33 @@
 <tbody>
 <tr><th colspan="3" align="left"><br>Tier&nbsp;2&nbsp;—&nbsp;SAFE&#8209;JSON&#8209;LD&nbsp;&nbsp;✅&nbsp;met</th></tr>
 <tr><th align="left">Expectation</th><th align="left">Summary</th><th align="left">Status</th></tr>
-<tr><td nowrap><samp>context-well-formed</samp></td><td>The root <code>@context</code>, if any, has a form JSON-LD allows</td><td>✅&nbsp;met</td></tr>
-<tr><td nowrap><samp>graph-well-formed</samp></td><td>The root <code>@graph</code>, if any, holds objects, not bare values</td><td>✅&nbsp;met</td></tr>
-<tr><td nowrap><samp>ids-and-types-strings</samp></td><td>Every <code>@id</code> is a string; every <code>@type</code> a string or an array of strings</td><td>✅&nbsp;met</td></tr>
-<tr><td nowrap><samp>context-at-root-only</samp></td><td>The document's only <code>@context</code> is the one at its root: no node below it and no term definition within it carries another</td><td>✅&nbsp;met</td></tr>
-<tr><td nowrap><samp>containers-absent</samp></td><td>No <code>@container</code> in a term definition</td><td>✅&nbsp;met</td></tr>
-<tr><td nowrap><samp>vocab-absent</samp></td><td>No <code>@vocab</code> in a context</td><td>✅&nbsp;met</td></tr>
-<tr><td nowrap><samp>context-protection-absent</samp></td><td>No <code>@protected</code>, <code>@propagate</code> or <code>@import</code> in a context</td><td>✅&nbsp;met</td></tr>
-<tr><td nowrap><samp>id-coercion-absent</samp></td><td>No <code>"@type": "@id"</code> in a term definition</td><td>✅&nbsp;met</td></tr>
+<tr><td nowrap><samp>non-null-context-is-object-string-or-array</samp></td><td>A non-null <code>@context</code> is an object, a string, or an array of objects and strings</td><td>✅&nbsp;met</td></tr>
+<tr><td nowrap><samp>context-at-root-only</samp></td><td>The file's only <code>@context</code> is at its top</td><td>✅&nbsp;met</td></tr>
+<tr><td nowrap><samp>context-containers-absent</samp></td><td>The <code>@context</code> never uses <code>@container</code> to tell a reader to interpret a property's array values as something other than individual values</td><td>✅&nbsp;met</td></tr>
+<tr><td nowrap><samp>context-vocab-absent</samp></td><td>The <code>@context</code> never uses <code>@vocab</code> to tell a reader to interpret a name written without a prefix as a term of some vocabulary</td><td>✅&nbsp;met</td></tr>
+<tr><td nowrap><samp>context-protected-absent</samp></td><td>The <code>@context</code> never uses <code>@protected</code> to lock its entries against redefinition by a later context</td><td>✅&nbsp;met</td></tr>
+<tr><td nowrap><samp>context-propagate-absent</samp></td><td>The <code>@context</code> never uses <code>@propagate</code> to limit which objects it applies to</td><td>✅&nbsp;met</td></tr>
+<tr><td nowrap><samp>context-import-absent</samp></td><td>The <code>@context</code> never uses <code>@import</code> to pull in entries from another context at a web address</td><td>✅&nbsp;met</td></tr>
+<tr><td nowrap><samp>context-id-coercion-absent</samp></td><td>The <code>@context</code> never uses <code>"@type": "@id"</code> to tell a reader to interpret a property's bare-string <code>&lt;value&gt;</code> as <code>{ "@id": &lt;value&gt; }</code></td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><samp>graph-at-root-only</samp></td><td><code>@graph</code> appears only at the root</td><td>✅&nbsp;met</td></tr>
+<tr><td nowrap><samp>graph-array-of-objects</samp></td><td>The root <code>@graph</code>, if any, holds objects, not bare values</td><td>✅&nbsp;met</td></tr>
+<tr><td nowrap><samp>ids-and-types-strings</samp></td><td>Every <code>@id</code> is a string; every <code>@type</code> a string or an array of strings</td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><samp>id-segments-portable</samp></td><td>Every segment of a relative <code>@id</code> is a portable name: letters, digits, dots, hyphens and underscores, beginning and ending with a letter or digit</td><td>✅&nbsp;met</td></tr>
 </tbody>
 <tbody>
 <tr><th colspan="3" align="left"><br>Tier&nbsp;3&nbsp;—&nbsp;TRACE&#8209;JSON&#8209;LD&nbsp;&nbsp;✅&nbsp;met</th></tr>
 <tr><th align="left">Expectation</th><th align="left">Summary</th><th align="left">Status</th></tr>
 <tr><td nowrap><samp>root-context-and-graph-only</samp></td><td>A JSON object with an <code>@context</code>, an <code>@graph</code>, and nothing else</td><td>✅&nbsp;met</td></tr>
-<tr><td nowrap><samp>disallowed-node-keywords-absent</samp></td><td>No keyword outside the <code>@context</code> other than <code>@context</code>, <code>@graph</code>, <code>@id</code> and <code>@type</code></td><td>✅&nbsp;met</td></tr>
-<tr><td nowrap><samp>disallowed-context-keywords-absent</samp></td><td>No member of an <code>@context</code> is a keyword other than <code>@base</code>; what a term definition holds is not a member of the <code>@context</code></td><td>✅&nbsp;met</td></tr>
+<tr><td nowrap><samp>disallowed-node-keywords-absent</samp></td><td>Apart from the <code>@context</code> and its contents, the only keywords in the file are <code>@graph</code>, <code>@id</code> and <code>@type</code></td><td>✅&nbsp;met</td></tr>
+<tr><td nowrap><samp>disallowed-context-keywords-absent</samp></td><td><code>@base</code> is the only keyword at the top level of the <code>@context</code></td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><samp>base-web-scheme</samp></td><td>The <code>@base</code>, if any, uses the <code>https</code> or <code>http</code> scheme</td><td>✅&nbsp;met</td></tr>
-<tr><td nowrap><samp>base-simple-url</samp></td><td>The <code>@base</code>, if any, is a simple URL: a host, no user info, dot segments, query or fragment, only URL characters, and a final <code>/</code></td><td>✅&nbsp;met</td></tr>
+<tr><td nowrap><samp>base-simple-url</samp></td><td>The <code>@base</code>, if any, is a simple URL. It names a host, has a path of portable names, uses only URL characters, and ends in <code>/</code>. It has no user info, dot segments, query or fragment</td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><samp>prefix-namespaces-terminated</samp></td><td>Every prefix maps to an absolute IRI ending in <code>#</code> or <code>/</code></td><td>✅&nbsp;met</td></tr>
-<tr><td nowrap><samp>context-local</samp></td><td>The <code>@context</code> is inline: no string names a remote context</td><td>✅&nbsp;met</td></tr>
-<tr><td nowrap><samp>context-aliases-absent</samp></td><td>No term definition aliases a property; a term definition holds only a <code>@type</code> naming a datatype</td><td>✅&nbsp;met</td></tr>
-<tr><td nowrap><samp>types-prefixed-or-absolute</samp></td><td>Every <code>@type</code> value is a prefixed or absolute IRI, never a bare name</td><td>✅&nbsp;met</td></tr>
+<tr><td nowrap><samp>context-local</samp></td><td>The entire <code>@context</code> is included in the file, never by reference to a web address</td><td>✅&nbsp;met</td></tr>
+<tr><td nowrap><samp>context-aliases-absent</samp></td><td>The <code>@context</code> never defines aliases for property names</td><td>✅&nbsp;met</td></tr>
+<tr><td nowrap><samp>context-assigns-only-datatypes-to-properties</samp></td><td>The only thing the <code>@context</code> assigns to a property is the datatype of its values</td><td>✅&nbsp;met</td></tr>
+<tr><td nowrap><samp>context-datatypes-named-by-iri</samp></td><td>Every datatype the <code>@context</code> gives a property is named by a prefixed or absolute IRI</td><td>✅&nbsp;met</td></tr>
+<tr><td nowrap><samp>types-prefixed-or-absolute</samp></td><td>Every <code>@type</code> value is a prefixed or absolute IRI</td><td>✅&nbsp;met</td></tr>
 </tbody>
 <tbody>
 <tr><th colspan="3" align="left"><br>Tier&nbsp;4&nbsp;—&nbsp;USES&#8209;TROV&#8209;CORRECTLY&nbsp;&nbsp;❌&nbsp;not&nbsp;met</th></tr>
