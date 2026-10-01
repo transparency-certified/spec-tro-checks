@@ -52,3 +52,4 @@
 {"kind":"review","path":"Dockerfile","blob":"7ed9e9d63441231447014934485802feaf3d0f45","by":"Timothy McPhillips","date":"2026-09-08","type":"careful"}
 {"kind":"review","path":"repro-config","blob":"5c21035e799e6f34b06af8c60c7fa1140a30b10a","by":"Timothy McPhillips","date":"2026-09-08","type":"careful"}
 {"kind":"review","path":".gitignore","blob":"fe336436871caee901a3525d77fc42b75b8e0eb5","by":"Timothy McPhillips","date":"2026-09-08","type":"careful"}
+{"kind":"origin","path":"candidates/01-spec-example-2026-04-08.jsonld","origin":"vendor"}

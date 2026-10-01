@@ -1,10 +1,10 @@
-# Report on `spec-example-2026-04-08-with-base-and-hashes.jsonld`
+# Report on `03-spec-example-2026-04-08-with-node-ids.jsonld`
 
 This report was written by `tro-checks`, which checks a TRO declaration against the requirements of the TRACE Specification.
 
-The 2026-04-08 example with an `@base` in its `@context` and a sha256 value in each of the four hash fields. Every value is computed from the artifact's own `@id` for reproducibility's sake only.
+The preceding candidate with an `@id` on each of its five remaining bare node objects, `trov:createdWith` and the four `trov:hash` nodes, and a time zone, `Z`, on each of its three times.
 
-This candidate is expected to satisfy [`Tier 6 - STANDALONE-TRO`](#tier-6-standalone-tro) at version `trace-spec-2026-04-19`. The candidate meets every expectation in that tier and in the five tiers below it.
+This candidate is expected to satisfy [`Tier 7 - LINKABLE-TRO`](#tier-7-linkable-tro) at version `trace-spec-2026-04-19`. The candidate meets every expectation in that tier and in the six tiers below it.
 
 The sections below give the status of each tier, then the status of each expectation.
 
@@ -15,10 +15,10 @@ The sections below give the status of each tier, then the status of each expecta
 <tr><th align="left"></th><th align="left"></th><th align="left">Declared by</th></tr>
 </thead>
 <tbody>
-<tr><td>Candidate</td><td nowrap><samp>spec-example-2026-04-08-with-base-and-hashes.jsonld</samp></td><td></td></tr>
-<tr><td>Description</td><td>The 2026-04-08 example with an <code>@base</code> in its <code>@context</code> and a sha256 value in each of the four hash fields. Every value is computed from the artifact's own <code>@id</code> for reproducibility's sake only.</td><td>the candidate manifest</td></tr>
+<tr><td>Candidate</td><td nowrap><samp>03-spec-example-2026-04-08-with-node-ids.jsonld</samp></td><td></td></tr>
+<tr><td>Description</td><td>The preceding candidate with an <code>@id</code> on each of its five remaining bare node objects, <code>trov:createdWith</code> and the four <code>trov:hash</code> nodes, and a time zone, <code>Z</code>, on each of its three times.</td><td>the candidate manifest</td></tr>
 <tr><td>Target&nbsp;version</td><td><samp>trace&#8209;spec&#8209;2026&#8209;04&#8209;19</samp></td><td>the candidate manifest</td></tr>
-<tr><td>Target&nbsp;tier</td><td><samp>Tier&nbsp;6&nbsp;&#8209;&nbsp;STANDALONE&#8209;TRO</samp></td><td>the candidate manifest</td></tr>
+<tr><td>Target&nbsp;tier</td><td><samp>Tier&nbsp;7&nbsp;&#8209;&nbsp;LINKABLE&#8209;TRO</samp></td><td>the candidate manifest</td></tr>
 </tbody>
 </table>
 
@@ -35,7 +35,7 @@ The sections below give the status of each tier, then the status of each expecta
 <tr><td><a href="#tier-4-uses-trov-correctly"><samp>Tier&nbsp;4&nbsp;&#8209;&nbsp;USES&#8209;TROV&#8209;CORRECTLY</samp></a></td><td>JSON-LD that uses TROV terms only in ways TRACE allows</td><td>✅&nbsp;met</td></tr>
 <tr><td><a href="#tier-5-defines-trs"><samp>Tier&nbsp;5&nbsp;&#8209;&nbsp;DEFINES&#8209;TRS</samp></a></td><td>JSON-LD that defines a Trusted Research System</td><td>✅&nbsp;met</td></tr>
 <tr><td><a href="#tier-6-standalone-tro"><samp>Tier&nbsp;6&nbsp;&#8209;&nbsp;STANDALONE&#8209;TRO</samp></a></td><td>A TRO declaration with the structure the TRACE Specification requires, whose references resolve within it</td><td>✅&nbsp;met</td></tr>
-<tr style="color: var(--vscode-descriptionForeground, #767676)"><td><em><a href="#tier-7-linkable-tro"><samp>Tier&nbsp;7&nbsp;&#8209;&nbsp;LINKABLE&#8209;TRO</samp></a></em></td><td><em>A TRO declaration whose element identifiers cannot collide with those in another TRO</em></td><td><em>not&nbsp;claimed</em></td></tr>
+<tr><td><a href="#tier-7-linkable-tro"><samp>Tier&nbsp;7&nbsp;&#8209;&nbsp;LINKABLE&#8209;TRO</samp></a></td><td>A TRO declaration whose element identifiers cannot collide with those in another TRO</td><td>✅&nbsp;met</td></tr>
 </tbody>
 </table>
 
@@ -95,7 +95,6 @@ The sections below give the status of each tier, then the status of each expecta
 <tr><td nowrap><samp>mime-types-two-part</samp></td><td>Every artifact's <code>trov:mimeType</code> is a string of the form <code>type/subtype</code></td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><samp>times-iso-8601</samp></td><td>Every <code>trov:startedAtTime</code> and <code>trov:endedAtTime</code> is an ISO 8601 date-time; the TRO's <code>schema:dateCreated</code>, if present, an ISO 8601 date or date-time</td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><samp>tro-name-description-text</samp></td><td>The TRO's <code>schema:name</code> and <code>schema:description</code>, if present, are Text: a string or an array of strings</td><td>✅&nbsp;met</td></tr>
-<tr><td nowrap><samp>creators-person-or-organization</samp></td><td>The TRO's <code>schema:creator</code>, if present, is a node typed <code>schema:Person</code> or <code>schema:Organization</code>, never a string</td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><samp>trov-capabilities-predefined</samp></td><td>A capability's <code>trov:</code> type is one TROV predefines</td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><samp>trov-performance-attributes-predefined</samp></td><td>A performance attribute's <code>trov:</code> type is one TROV predefines</td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><samp>trov-tro-attributes-predefined</samp></td><td>A TRO attribute's <code>trov:</code> type is one TROV predefines</td><td>✅&nbsp;met</td></tr>
@@ -122,13 +121,13 @@ The sections below give the status of each tier, then the status of each expecta
 <tr><td nowrap><samp>gpg-signing-key-present</samp></td><td>A TRO signed with <code>trov:GPGSigning</code> gives its TRS a <code>trov:publicKey</code></td><td>✅&nbsp;met</td></tr>
 </tbody>
 <tbody>
-<tr style="color: var(--vscode-descriptionForeground, #767676)"><th colspan="3" align="left"><br><a id="tier-7-linkable-tro"></a><em><samp>Tier&nbsp;7&nbsp;&#8209;&nbsp;LINKABLE&#8209;TRO</samp>&nbsp;&nbsp;not&nbsp;claimed</em></th></tr>
-<tr style="color: var(--vscode-descriptionForeground, #767676)"><th align="left">Expectation</th><th align="left">Summary</th><th align="left">Status</th></tr>
-<tr style="color: var(--vscode-descriptionForeground, #767676)"><td nowrap><em><samp>base-declared</samp></em></td><td><em>The <code>@context</code> includes an <code>@base</code></em></td><td><em>not&nbsp;claimed</em></td></tr>
-<tr style="color: var(--vscode-descriptionForeground, #767676)"><td nowrap><em><samp>base-has-path</samp></em></td><td><em>The <code>@base</code> names something below the host, not the host alone</em></td><td><em>not&nbsp;claimed</em></td></tr>
-<tr style="color: var(--vscode-descriptionForeground, #767676)"><td nowrap><em><samp>base-host-lowercase</samp></em></td><td><em>The <code>@base</code> host is lowercase</em></td><td><em>not&nbsp;claimed</em></td></tr>
-<tr style="color: var(--vscode-descriptionForeground, #767676)"><td nowrap><em><samp>base-host-ownable</samp></em></td><td><em>The <code>@base</code> host is a domain name the minter could hold, not a reserved or documentation name</em></td><td><em>not&nbsp;claimed</em></td></tr>
-<tr style="color: var(--vscode-descriptionForeground, #767676)"><td nowrap><em><samp>node-ids-present</samp></em></td><td><em>Every node carries an explicit <code>@id</code></em></td><td><em>not&nbsp;claimed</em></td></tr>
-<tr style="color: var(--vscode-descriptionForeground, #767676)"><td nowrap><em><samp>blank-node-ids-absent</samp></em></td><td><em>No <code>@id</code> is a blank node identifier</em></td><td><em>not&nbsp;claimed</em></td></tr>
+<tr><th colspan="3" align="left"><br><a id="tier-7-linkable-tro"></a><samp>Tier&nbsp;7&nbsp;&#8209;&nbsp;LINKABLE&#8209;TRO</samp>&nbsp;&nbsp;✅&nbsp;met</th></tr>
+<tr><th align="left">Expectation</th><th align="left">Summary</th><th align="left">Status</th></tr>
+<tr><td nowrap><samp>base-declared</samp></td><td>The <code>@context</code> includes an <code>@base</code></td><td>✅&nbsp;met</td></tr>
+<tr><td nowrap><samp>base-has-path</samp></td><td>The <code>@base</code> names something below the host, not the host alone</td><td>✅&nbsp;met</td></tr>
+<tr><td nowrap><samp>base-host-lowercase</samp></td><td>The <code>@base</code> host is lowercase</td><td>✅&nbsp;met</td></tr>
+<tr><td nowrap><samp>base-host-ownable</samp></td><td>The <code>@base</code> host is a domain name the minter could hold, not a reserved or documentation name</td><td>✅&nbsp;met</td></tr>
+<tr><td nowrap><samp>node-ids-present</samp></td><td>Every node carries an explicit <code>@id</code></td><td>✅&nbsp;met</td></tr>
+<tr><td nowrap><samp>blank-node-ids-absent</samp></td><td>No <code>@id</code> is a blank node identifier</td><td>✅&nbsp;met</td></tr>
 </tbody>
 </table>
