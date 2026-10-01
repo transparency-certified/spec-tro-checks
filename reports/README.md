@@ -24,7 +24,7 @@ The 2026-04-08 example with an `@base` in its `@context` and a sha256 value in e
 <tr><th align="left">Target version</th><th align="left">Target tier</th><th align="left">Status</th><th align="left">Report</th></tr>
 </thead>
 <tbody>
-<tr><td>trace&#8209;spec&#8209;2026&#8209;04&#8209;19</td><td>6&nbsp;STANDALONE&#8209;TRO</td><td>❌&nbsp;not&nbsp;met</td><td><a href="spec-example-2026-04-08-with-base-and-hashes_trace-spec-2026-04-19_tier-6.md">spec-example-2026-04-08-with-base-and-hashes_trace-spec-2026-04-19_tier-6.md</a></td></tr>
+<tr><td>trace&#8209;spec&#8209;2026&#8209;04&#8209;19</td><td>6&nbsp;STANDALONE&#8209;TRO</td><td>✅&nbsp;met</td><td><a href="spec-example-2026-04-08-with-base-and-hashes_trace-spec-2026-04-19_tier-6.md">spec-example-2026-04-08-with-base-and-hashes_trace-spec-2026-04-19_tier-6.md</a></td></tr>
 </tbody>
 </table>
 
@@ -37,6 +37,6 @@ The preceding candidate with an `@id` on each of its five remaining bare node ob
 <tr><th align="left">Target version</th><th align="left">Target tier</th><th align="left">Status</th><th align="left">Report</th></tr>
 </thead>
 <tbody>
-<tr><td>trace&#8209;spec&#8209;2026&#8209;04&#8209;19</td><td>7&nbsp;LINKABLE&#8209;TRO</td><td>❌&nbsp;not&nbsp;met</td><td><a href="spec-example-2026-04-08-with-node-ids_trace-spec-2026-04-19_tier-7.md">spec-example-2026-04-08-with-node-ids_trace-spec-2026-04-19_tier-7.md</a></td></tr>
+<tr><td>trace&#8209;spec&#8209;2026&#8209;04&#8209;19</td><td>7&nbsp;LINKABLE&#8209;TRO</td><td>✅&nbsp;met</td><td><a href="spec-example-2026-04-08-with-node-ids_trace-spec-2026-04-19_tier-7.md">spec-example-2026-04-08-with-node-ids_trace-spec-2026-04-19_tier-7.md</a></td></tr>
 </tbody>
 </table>

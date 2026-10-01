@@ -14,7 +14,7 @@ the `tro-checks` module on the candidates in this repository.
 | --- | --- |
 | [`candidates/`](candidates) | The candidates checked, one `.jsonld` file each. |
 | [`candidates/manifest.json`](candidates/manifest.json) | Describes each candidate and lists its targets. Each target names a tier and a version. |
-| [`reports/`](reports) | What the checks found: one report per target, listed in [`reports/README.md`](reports/README.md). |
+| [`reports/`](reports) | The reports of what the checks found. The report for each target is listed in [`reports/README.md`](reports/README.md). |
 | [`Dockerfile`](Dockerfile) | Requires `tro-checks`. |
 
 ## Running it
