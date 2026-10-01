@@ -13,7 +13,7 @@ the `tro-checks` module on the candidates in this repository.
 | File | What it is |
 | --- | --- |
 | [`candidates/`](candidates) | The candidates checked, one `.jsonld` file each. |
-| [`candidates/manifest.json`](candidates/manifest.json) | What each candidate is, and the tier this repository expects it to satisfy. |
+| [`candidates/manifest.json`](candidates/manifest.json) | Each candidate's description, target tier and target version. |
 | [`reports/`](reports) | What the checks found, one report per candidate. |
 | [`Dockerfile`](Dockerfile) | Requires `tro-checks`. |
 

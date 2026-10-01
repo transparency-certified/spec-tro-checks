@@ -3,11 +3,14 @@
 ## Candidate Information
 
 <table>
+<thead>
+<tr><th align="left"></th><th align="left"></th><th align="left">Declared by</th></tr>
+</thead>
 <tbody>
-<tr><td>Candidate</td><td nowrap><samp>spec-example-2026-04-08-with-base-and-hashes.jsonld</samp></td></tr>
-<tr><td>Description</td><td>The 2026-04-08 example with an <code>@base</code> in its <code>@context</code> and a sha256 value in each of the four hash fields. Every value is computed from the artifact's own <code>@id</code> for reproducibility's sake only.</td></tr>
-<tr><td>Target</td><td>6&nbsp;STANDALONE&#8209;TRO</td></tr>
-<tr><td>Target&nbsp;declared&nbsp;by</td><td>the candidate manifest</td></tr>
+<tr><td>Candidate</td><td nowrap><samp>spec-example-2026-04-08-with-base-and-hashes.jsonld</samp></td><td></td></tr>
+<tr><td>Description</td><td>The 2026-04-08 example with an <code>@base</code> in its <code>@context</code> and a sha256 value in each of the four hash fields. Every value is computed from the artifact's own <code>@id</code> for reproducibility's sake only.</td><td>the candidate manifest</td></tr>
+<tr><td>Target&nbsp;version</td><td>trace&#8209;spec&#8209;2026&#8209;04&#8209;19</td><td>the candidate manifest</td></tr>
+<tr><td>Target&nbsp;tier</td><td>6&nbsp;STANDALONE&#8209;TRO</td><td>the candidate manifest</td></tr>
 </tbody>
 </table>
 
@@ -78,7 +81,7 @@
 <tr><td nowrap><samp>context-and-nonempty-graph-present</samp></td><td>The file has a non-null <code>@context</code> and an <code>@graph</code> holding at least one node</td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><samp>core-prefixes-pinned</samp></td><td><code>trov</code> is declared and is the only prefix for a TROV namespace; <code>rdf</code>, <code>rdfs</code> and <code>schema</code> prefixes, if declared, are the standard ones</td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><samp>trov-terms-known</samp></td><td>Every <code>trov:</code> name is one TROV defines</td><td>✅&nbsp;met</td></tr>
-<tr><td nowrap><samp>trov-version-known</samp></td><td>The TRO declares, in <code>trov:vocabularyVersion</code>, a released version of TROV</td><td>✅&nbsp;met</td></tr>
+<tr><td nowrap><samp>trov-version-known</samp></td><td>The TRO declares, in <code>trov:vocabularyVersion</code>, a known version of TROV</td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><samp>hash-algorithms-permitted</samp></td><td>Every hash names an algorithm TRACE permits: a collision-resistant digest from the SHA-2, SHA-3 or BLAKE families</td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><samp>hash-values-correct-form</samp></td><td>Every hash value is lowercase hexadecimal of the length its algorithm produces</td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><samp>mime-types-two-part</samp></td><td>Every artifact's <code>trov:mimeType</code> is a string of the form <code>type/subtype</code></td><td>✅&nbsp;met</td></tr>
