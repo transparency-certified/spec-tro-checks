@@ -1,4 +1,12 @@
-# Report
+# Report on `spec-example-2026-04-08.jsonld`
+
+This report was written by `tro-checks`, which checks a TRO declaration against the requirements of the TRACE Specification.
+
+The specification's [Complete Example](https://transparency-certified.github.io/trace-specification/docs/tro-declaration-format#complete-example), copied verbatim on 2026-09-03 from the 2026-04-08 revision. Its four `trov:hashValue` fields carry elided placeholders (`a1b2c3d4...`, `aaa1...`) and its `@context` declares no `@base`.
+
+This candidate is expected to satisfy [`Tier 6 - STANDALONE-TRO`](#tier-6-standalone-tro) at version `trace-spec-2026-04-19`. The candidate does not meet one of the expectations in [`Tier 4 - USES-TROV-CORRECTLY`](#tier-4-uses-trov-correctly).
+
+The sections below give the status of each tier, then the status of each expectation, then, for each expectation not met, what was found, where in the candidate, and why it does not meet the expectation.
 
 ## Candidate Information
 
@@ -9,8 +17,8 @@
 <tbody>
 <tr><td>Candidate</td><td nowrap><samp>spec-example-2026-04-08.jsonld</samp></td><td></td></tr>
 <tr><td>Description</td><td>The specification's <a href="https://transparency-certified.github.io/trace-specification/docs/tro-declaration-format#complete-example">Complete Example</a>, copied verbatim on 2026-09-03 from the 2026-04-08 revision. Its four <code>trov:hashValue</code> fields carry elided placeholders (<code>a1b2c3d4...</code>, <code>aaa1...</code>) and its <code>@context</code> declares no <code>@base</code>.</td><td>the candidate manifest</td></tr>
-<tr><td>Target&nbsp;version</td><td>trace&#8209;spec&#8209;2026&#8209;04&#8209;19</td><td>the candidate manifest</td></tr>
-<tr><td>Target&nbsp;tier</td><td>6&nbsp;STANDALONE&#8209;TRO</td><td>the candidate manifest</td></tr>
+<tr><td>Target&nbsp;version</td><td><samp>trace&#8209;spec&#8209;2026&#8209;04&#8209;19</samp></td><td>the candidate manifest</td></tr>
+<tr><td>Target&nbsp;tier</td><td><samp>Tier&nbsp;6&nbsp;&#8209;&nbsp;STANDALONE&#8209;TRO</samp></td><td>the candidate manifest</td></tr>
 </tbody>
 </table>
 
@@ -18,16 +26,16 @@
 
 <table>
 <thead>
-<tr><th align="left">Tier</th><th align="left">ID</th><th align="left">Description</th><th align="left">Status</th></tr>
+<tr><th align="left">Tier</th><th align="left">Description</th><th align="left">Status</th></tr>
 </thead>
 <tbody>
-<tr><td>1</td><td>SAFE&#8209;JSON</td><td>JSON that every supported parser reads the same way</td><td>✅&nbsp;met</td></tr>
-<tr><td>2</td><td>SAFE&#8209;JSON&#8209;LD</td><td>JSON-LD that uses only those constructs our supported JSON-LD processors handle consistently, and whose interpretation depends on nothing outside the file</td><td>✅&nbsp;met</td></tr>
-<tr><td>3</td><td>TRACE&#8209;PERMISSIBLE&#8209;JSON&#8209;LD</td><td>JSON-LD that avoids constructs and practices TRACE disallows</td><td>✅&nbsp;met</td></tr>
-<tr><td>4</td><td>USES&#8209;TROV&#8209;CORRECTLY</td><td>JSON-LD that uses TROV terms only in ways TRACE allows</td><td>❌&nbsp;not&nbsp;met</td></tr>
-<tr><td>5</td><td>DEFINES&#8209;TRS</td><td>JSON-LD that defines a Trusted Research System</td><td>❌&nbsp;not&nbsp;met</td></tr>
-<tr><td>6</td><td>STANDALONE&#8209;TRO</td><td>A TRO declaration with the structure the TRACE Specification requires, whose references resolve within it</td><td>❌&nbsp;not&nbsp;met</td></tr>
-<tr style="color: var(--vscode-descriptionForeground, #767676)"><td><em>7</em></td><td><em>LINKABLE&#8209;TRO</em></td><td><em>A TRO declaration whose element identifiers cannot collide with those in another TRO</em></td><td><em>not&nbsp;claimed</em></td></tr>
+<tr><td><a href="#tier-1-safe-json"><samp>Tier&nbsp;1&nbsp;&#8209;&nbsp;SAFE&#8209;JSON</samp></a></td><td>JSON that every supported parser reads the same way</td><td>✅&nbsp;met</td></tr>
+<tr><td><a href="#tier-2-safe-json-ld"><samp>Tier&nbsp;2&nbsp;&#8209;&nbsp;SAFE&#8209;JSON&#8209;LD</samp></a></td><td>JSON-LD that uses only those constructs our supported JSON-LD processors handle consistently, and whose interpretation depends on nothing outside the file</td><td>✅&nbsp;met</td></tr>
+<tr><td><a href="#tier-3-trace-permissible-json-ld"><samp>Tier&nbsp;3&nbsp;&#8209;&nbsp;TRACE&#8209;PERMISSIBLE&#8209;JSON&#8209;LD</samp></a></td><td>JSON-LD that avoids constructs and practices TRACE disallows</td><td>✅&nbsp;met</td></tr>
+<tr><td><a href="#tier-4-uses-trov-correctly"><samp>Tier&nbsp;4&nbsp;&#8209;&nbsp;USES&#8209;TROV&#8209;CORRECTLY</samp></a></td><td>JSON-LD that uses TROV terms only in ways TRACE allows</td><td>❌&nbsp;not&nbsp;met</td></tr>
+<tr><td><a href="#tier-5-defines-trs"><samp>Tier&nbsp;5&nbsp;&#8209;&nbsp;DEFINES&#8209;TRS</samp></a></td><td>JSON-LD that defines a Trusted Research System</td><td>❌&nbsp;not&nbsp;met</td></tr>
+<tr><td><a href="#tier-6-standalone-tro"><samp>Tier&nbsp;6&nbsp;&#8209;&nbsp;STANDALONE&#8209;TRO</samp></a></td><td>A TRO declaration with the structure the TRACE Specification requires, whose references resolve within it</td><td>❌&nbsp;not&nbsp;met</td></tr>
+<tr style="color: var(--vscode-descriptionForeground, #767676)"><td><em><a href="#tier-7-linkable-tro"><samp>Tier&nbsp;7&nbsp;&#8209;&nbsp;LINKABLE&#8209;TRO</samp></a></em></td><td><em>A TRO declaration whose element identifiers cannot collide with those in another TRO</em></td><td><em>not&nbsp;claimed</em></td></tr>
 </tbody>
 </table>
 
@@ -35,7 +43,7 @@
 
 <table>
 <tbody>
-<tr><th colspan="3" align="left"><br>Tier&nbsp;1&nbsp;—&nbsp;SAFE&#8209;JSON&nbsp;&nbsp;✅&nbsp;met</th></tr>
+<tr><th colspan="3" align="left"><br><a id="tier-1-safe-json"></a><samp>Tier&nbsp;1&nbsp;&#8209;&nbsp;SAFE&#8209;JSON</samp>&nbsp;&nbsp;✅&nbsp;met</th></tr>
 <tr><th align="left">Expectation</th><th align="left">Summary</th><th align="left">Status</th></tr>
 <tr><td nowrap><samp>utf8-encoded</samp></td><td>The candidate is UTF-8</td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><samp>json-parses</samp></td><td>The candidate parses as JSON without errors</td><td>✅&nbsp;met</td></tr>
@@ -44,7 +52,7 @@
 <tr><td nowrap><samp>numbers-within-range</samp></td><td>Every number fits a double; every integer is exact</td><td>✅&nbsp;met</td></tr>
 </tbody>
 <tbody>
-<tr><th colspan="3" align="left"><br>Tier&nbsp;2&nbsp;—&nbsp;SAFE&#8209;JSON&#8209;LD&nbsp;&nbsp;✅&nbsp;met</th></tr>
+<tr><th colspan="3" align="left"><br><a id="tier-2-safe-json-ld"></a><samp>Tier&nbsp;2&nbsp;&#8209;&nbsp;SAFE&#8209;JSON&#8209;LD</samp>&nbsp;&nbsp;✅&nbsp;met</th></tr>
 <tr><th align="left">Expectation</th><th align="left">Summary</th><th align="left">Status</th></tr>
 <tr><td nowrap><samp>context-at-root-only</samp></td><td>The file's only <code>@context</code> is at its top</td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><samp>remote-contexts-absent</samp></td><td>The <code>@context</code> never refers by web address to a context kept elsewhere</td><td>✅&nbsp;met</td></tr>
@@ -61,7 +69,7 @@
 <tr><td nowrap><samp>id-segments-portable</samp></td><td>Every segment of a relative <code>@id</code> is a portable name: letters, digits, dots, hyphens and underscores, beginning and ending with a letter or digit</td><td>✅&nbsp;met</td></tr>
 </tbody>
 <tbody>
-<tr><th colspan="3" align="left"><br>Tier&nbsp;3&nbsp;—&nbsp;TRACE&#8209;PERMISSIBLE&#8209;JSON&#8209;LD&nbsp;&nbsp;✅&nbsp;met</th></tr>
+<tr><th colspan="3" align="left"><br><a id="tier-3-trace-permissible-json-ld"></a><samp>Tier&nbsp;3&nbsp;&#8209;&nbsp;TRACE&#8209;PERMISSIBLE&#8209;JSON&#8209;LD</samp>&nbsp;&nbsp;✅&nbsp;met</th></tr>
 <tr><th align="left">Expectation</th><th align="left">Summary</th><th align="left">Status</th></tr>
 <tr><td nowrap><samp>root-context-and-graph-only</samp></td><td>The file is a JSON object whose top level holds no member other than <code>@context</code> and <code>@graph</code></td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><samp>composite-contexts-absent</samp></td><td>The <code>@context</code> is never composed from several parts</td><td>✅&nbsp;met</td></tr>
@@ -76,14 +84,14 @@
 <tr><td nowrap><samp>types-prefixed-or-absolute</samp></td><td>Every <code>@type</code> value is a prefixed or absolute IRI</td><td>✅&nbsp;met</td></tr>
 </tbody>
 <tbody>
-<tr><th colspan="3" align="left"><br>Tier&nbsp;4&nbsp;—&nbsp;USES&#8209;TROV&#8209;CORRECTLY&nbsp;&nbsp;❌&nbsp;not&nbsp;met</th></tr>
+<tr><th colspan="3" align="left"><br><a id="tier-4-uses-trov-correctly"></a><samp>Tier&nbsp;4&nbsp;&#8209;&nbsp;USES&#8209;TROV&#8209;CORRECTLY</samp>&nbsp;&nbsp;❌&nbsp;not&nbsp;met</th></tr>
 <tr><th align="left">Expectation</th><th align="left">Summary</th><th align="left">Status</th></tr>
 <tr><td nowrap><samp>context-and-nonempty-graph-present</samp></td><td>The file has a non-null <code>@context</code> and an <code>@graph</code> holding at least one node</td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><samp>core-prefixes-pinned</samp></td><td><code>trov</code> is declared and is the only prefix for a TROV namespace; <code>rdf</code>, <code>rdfs</code> and <code>schema</code> prefixes, if declared, are the standard ones</td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><samp>trov-terms-known</samp></td><td>Every <code>trov:</code> name is one TROV defines</td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><samp>trov-version-known</samp></td><td>The TRO declares, in <code>trov:vocabularyVersion</code>, a known version of TROV</td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><samp>hash-algorithms-permitted</samp></td><td>Every hash names an algorithm TRACE permits: a collision-resistant digest from the SHA-2, SHA-3 or BLAKE families</td><td>✅&nbsp;met</td></tr>
-<tr><td nowrap><samp>hash-values-correct-form</samp></td><td>Every hash value is lowercase hexadecimal of the length its algorithm produces</td><td>❌&nbsp;not&nbsp;met</td></tr>
+<tr><td nowrap><a href="#unmet-expectation-hash-values-correct-form"><samp>hash-values-correct-form</samp></a></td><td>Every hash value is lowercase hexadecimal of the length its algorithm produces</td><td>❌&nbsp;not&nbsp;met</td></tr>
 <tr><td nowrap><samp>mime-types-two-part</samp></td><td>Every artifact's <code>trov:mimeType</code> is a string of the form <code>type/subtype</code></td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><samp>times-iso-8601</samp></td><td>Every <code>trov:startedAtTime</code> and <code>trov:endedAtTime</code> is an ISO 8601 date-time; the TRO's <code>schema:dateCreated</code>, if present, an ISO 8601 date or date-time</td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><samp>tro-name-description-text</samp></td><td>The TRO's <code>schema:name</code> and <code>schema:description</code>, if present, are Text: a string or an array of strings</td><td>✅&nbsp;met</td></tr>
@@ -96,12 +104,12 @@
 <tr><td nowrap><samp>trov-signing-mechanisms-predefined</samp></td><td>A signing mechanism is identified by reference, and a <code>trov:</code> one is one TROV predefines</td><td>✅&nbsp;met</td></tr>
 </tbody>
 <tbody>
-<tr><th colspan="3" align="left"><br>Tier&nbsp;5&nbsp;—&nbsp;DEFINES&#8209;TRS&nbsp;&nbsp;❌&nbsp;not&nbsp;met</th></tr>
+<tr><th colspan="3" align="left"><br><a id="tier-5-defines-trs"></a><samp>Tier&nbsp;5&nbsp;&#8209;&nbsp;DEFINES&#8209;TRS</samp>&nbsp;&nbsp;❌&nbsp;not&nbsp;met</th></tr>
 <tr><th align="left">Expectation</th><th align="left">Summary</th><th align="left">Status</th></tr>
 <tr><td nowrap><samp>trs-defined</samp></td><td>A TRS is defined, with an <code>@id</code>, at the top of the <code>@graph</code> or as the object of <code>trov:wasAssembledBy</code>, and nowhere else</td><td>✅&nbsp;met</td></tr>
 </tbody>
 <tbody>
-<tr><th colspan="3" align="left"><br>Tier&nbsp;6&nbsp;—&nbsp;STANDALONE&#8209;TRO&nbsp;&nbsp;❌&nbsp;not&nbsp;met</th></tr>
+<tr><th colspan="3" align="left"><br><a id="tier-6-standalone-tro"></a><samp>Tier&nbsp;6&nbsp;&#8209;&nbsp;STANDALONE&#8209;TRO</samp>&nbsp;&nbsp;❌&nbsp;not&nbsp;met</th></tr>
 <tr><th align="left">Expectation</th><th align="left">Summary</th><th align="left">Status</th></tr>
 <tr><td nowrap><samp>tro-top-level-in-graph</samp></td><td>The TRO is a top-level member of the <code>@graph</code></td><td>✅&nbsp;met</td></tr>
 <tr><td nowrap><samp>trov-objects-identified</samp></td><td>Every object typed with a TROV class carries an <code>@id</code></td><td>✅&nbsp;met</td></tr>
@@ -114,7 +122,7 @@
 <tr><td nowrap><samp>gpg-signing-key-present</samp></td><td>A TRO signed with <code>trov:GPGSigning</code> gives its TRS a <code>trov:publicKey</code></td><td>✅&nbsp;met</td></tr>
 </tbody>
 <tbody>
-<tr style="color: var(--vscode-descriptionForeground, #767676)"><th colspan="3" align="left"><br><em>Tier&nbsp;7&nbsp;—&nbsp;LINKABLE&#8209;TRO&nbsp;&nbsp;not&nbsp;claimed</em></th></tr>
+<tr style="color: var(--vscode-descriptionForeground, #767676)"><th colspan="3" align="left"><br><a id="tier-7-linkable-tro"></a><em><samp>Tier&nbsp;7&nbsp;&#8209;&nbsp;LINKABLE&#8209;TRO</samp>&nbsp;&nbsp;not&nbsp;claimed</em></th></tr>
 <tr style="color: var(--vscode-descriptionForeground, #767676)"><th align="left">Expectation</th><th align="left">Summary</th><th align="left">Status</th></tr>
 <tr style="color: var(--vscode-descriptionForeground, #767676)"><td nowrap><em><samp>base-declared</samp></em></td><td><em>The <code>@context</code> includes an <code>@base</code></em></td><td><em>not&nbsp;claimed</em></td></tr>
 <tr style="color: var(--vscode-descriptionForeground, #767676)"><td nowrap><em><samp>base-has-path</samp></em></td><td><em>The <code>@base</code> names something below the host, not the host alone</em></td><td><em>not&nbsp;claimed</em></td></tr>
