@@ -1,4 +1,4 @@
-# Report on `03-spec-example-2026-04-08-with-node-ids.jsonld`
+# Report on `03-spec-example-2026-04-08-with-node-ids.jsonld` at version `0.1`
 
 This report was written by `tro-checks`, which checks a TRO declaration against the requirements of the TRACE Specification.
 
@@ -16,6 +16,7 @@ The sections below give the status of each tier, then the status of each expecta
 </thead>
 <tbody>
 <tr><td>Candidate</td><td nowrap><samp>03-spec-example-2026-04-08-with-node-ids.jsonld</samp></td><td></td></tr>
+<tr><td>Created&nbsp;with</td><td><code>tro-utils 0.2.2</code></td><td>the candidate</td></tr>
 <tr><td>Description</td><td>The preceding candidate with an <code>@id</code> on each of its five remaining bare node objects, <code>trov:createdWith</code> and the four <code>trov:hash</code> nodes, and a time zone, <code>Z</code>, on each of its three times.</td><td>the candidate manifest</td></tr>
 <tr><td>Target&nbsp;version</td><td><samp>0.1</samp></td><td>the candidate manifest</td></tr>
 <tr><td>Target&nbsp;tier</td><td><samp>Tier&nbsp;7&nbsp;&#8209;&nbsp;LINKABLE&#8209;TRO</samp></td><td>the candidate manifest</td></tr>
@@ -137,7 +138,11 @@ The sections below give the status of each tier, then the status of each expecta
 </tbody>
 </table>
 
-## Diagnostics for Each Unmet Expectation
+<a id="diagnostics"></a>
+
+## Diagnostics for the 3 Unmet Expectations
+
+<a id="unmet-expectation-trs-id-absolute"></a>
 
 ### Unmet expectation: trs-id-absolute
 
@@ -156,6 +161,8 @@ Expectation unmet in 1 place:
 </tbody>
 </table>
 
+<a id="unmet-expectation-capability-ids-absolute"></a>
+
 ### Unmet expectation: capability-ids-absolute
 
 Detailed expectation: Every value of trov:hasCapability that carries an @id carries an absolute IRI, or a compact IRI whose prefix is not trov.
@@ -172,6 +179,8 @@ Expectation unmet in 1 place:
 <tr><th align="left">Where</th><td><samp>/<wbr>@graph/<wbr>0/<wbr>trov:wasAssembledBy/<wbr>trov:hasCapability/<wbr>0/<wbr>@id</samp></td></tr>
 </tbody>
 </table>
+
+<a id="unmet-expectation-performance-attribute-warrants-absolute"></a>
 
 ### Unmet expectation: performance-attribute-warrants-absolute
 

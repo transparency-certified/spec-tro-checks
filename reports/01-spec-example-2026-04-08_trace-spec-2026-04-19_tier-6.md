@@ -1,4 +1,4 @@
-# Report on `01-spec-example-2026-04-08.jsonld`
+# Report on `01-spec-example-2026-04-08.jsonld` at version `trace-spec-2026-04-19`
 
 This report was written by `tro-checks`, which checks a TRO declaration against the requirements of the TRACE Specification.
 
@@ -16,6 +16,7 @@ The sections below give the status of each tier, then the status of each expecta
 </thead>
 <tbody>
 <tr><td>Candidate</td><td nowrap><samp>01-spec-example-2026-04-08.jsonld</samp></td><td></td></tr>
+<tr><td>Created&nbsp;with</td><td><code>tro-utils 0.2.2</code></td><td>the candidate</td></tr>
 <tr><td>Description</td><td>The specification's <a href="https://transparency-certified.github.io/trace-specification/docs/tro-declaration-format#complete-example">Complete Example</a>, copied verbatim on 2026-09-03 from the 2026-04-08 revision. Its four <code>trov:hashValue</code> fields carry elided placeholders (<code>a1b2c3d4...</code>, <code>aaa1...</code>) and its <code>@context</code> declares no <code>@base</code>.</td><td>the candidate manifest</td></tr>
 <tr><td>Target&nbsp;version</td><td><samp>trace&#8209;spec&#8209;2026&#8209;04&#8209;19</samp></td><td>the candidate manifest</td></tr>
 <tr><td>Target&nbsp;tier</td><td><samp>Tier&nbsp;6&nbsp;&#8209;&nbsp;STANDALONE&#8209;TRO</samp></td><td>the candidate manifest</td></tr>
@@ -132,7 +133,11 @@ The sections below give the status of each tier, then the status of each expecta
 </tbody>
 </table>
 
-## Diagnostics for Each Unmet Expectation
+<a id="diagnostics"></a>
+
+## Diagnostics for the Unmet Expectation
+
+<a id="unmet-expectation-hash-values-correct-form"></a>
 
 ### Unmet expectation: hash-values-correct-form
 

@@ -1,4 +1,4 @@
-# Report on `02-spec-example-2026-04-08-with-base-and-hashes.jsonld`
+# Report on `02-spec-example-2026-04-08-with-base-and-hashes.jsonld` at version `trace-spec-2026-04-19`
 
 This report was written by `tro-checks`, which checks a TRO declaration against the requirements of the TRACE Specification.
 
@@ -16,6 +16,7 @@ The sections below give the status of each tier, then the status of each expecta
 </thead>
 <tbody>
 <tr><td>Candidate</td><td nowrap><samp>02-spec-example-2026-04-08-with-base-and-hashes.jsonld</samp></td><td></td></tr>
+<tr><td>Created&nbsp;with</td><td><code>tro-utils 0.2.2</code></td><td>the candidate</td></tr>
 <tr><td>Description</td><td>The 2026-04-08 example with an <code>@base</code> in its <code>@context</code> and a sha256 value in each of the four hash fields. Every value is computed from the artifact's own <code>@id</code> for reproducibility's sake only.</td><td>the candidate manifest</td></tr>
 <tr><td>Target&nbsp;version</td><td><samp>trace&#8209;spec&#8209;2026&#8209;04&#8209;19</samp></td><td>the candidate manifest</td></tr>
 <tr><td>Target&nbsp;tier</td><td><samp>Tier&nbsp;6&nbsp;&#8209;&nbsp;STANDALONE&#8209;TRO</samp></td><td>the candidate manifest</td></tr>
