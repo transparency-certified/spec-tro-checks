@@ -1,10 +1,10 @@
-# Report on `01-spec-example-2026-04-08.jsonld` at version `trace-spec-2026-04-19`
+# Report on `01-spec-example-2026-04-08.jsonld` at version `trace-2026-04-19`
 
 This report was written by `tro-checks`, which checks a TRO declaration against the requirements of the TRACE Specification.
 
 The specification's [Complete Example](https://transparency-certified.github.io/trace-specification/docs/tro-declaration-format#complete-example), copied verbatim on 2026-09-03 from the 2026-04-08 revision. Its four `trov:hashValue` fields carry elided placeholders (`a1b2c3d4...`, `aaa1...`) and its `@context` declares no `@base`.
 
-This candidate is expected to satisfy [`Tier 6 - STANDALONE-TRO`](#tier-6-standalone-tro) at version `trace-spec-2026-04-19`. The candidate does not meet one of the expectations in [`Tier 4 - USES-TROV-CORRECTLY`](#tier-4-uses-trov-correctly).
+This candidate is expected to satisfy [`Tier 6 - STANDALONE-TRO`](#tier-6-standalone-tro) at version `trace-2026-04-19`. The candidate does not meet one of the expectations in [`Tier 4 - USES-TROV-CORRECTLY`](#tier-4-uses-trov-correctly).
 
 The sections below give the status of each tier, then the status of each expectation, then, for each expectation not met, what was found, where in the candidate, and why it does not meet the expectation.
 
@@ -18,7 +18,7 @@ The sections below give the status of each tier, then the status of each expecta
 <tr><td>Candidate</td><td nowrap><samp>01-spec-example-2026-04-08.jsonld</samp></td><td></td></tr>
 <tr><td>Created&nbsp;with</td><td><code>tro-utils 0.2.2</code></td><td>the candidate</td></tr>
 <tr><td>Description</td><td>The specification's <a href="https://transparency-certified.github.io/trace-specification/docs/tro-declaration-format#complete-example">Complete Example</a>, copied verbatim on 2026-09-03 from the 2026-04-08 revision. Its four <code>trov:hashValue</code> fields carry elided placeholders (<code>a1b2c3d4...</code>, <code>aaa1...</code>) and its <code>@context</code> declares no <code>@base</code>.</td><td>the candidate manifest</td></tr>
-<tr><td>Target&nbsp;version</td><td><samp>trace&#8209;spec&#8209;2026&#8209;04&#8209;19</samp></td><td>the candidate manifest</td></tr>
+<tr><td>Target&nbsp;version</td><td><samp>trace&#8209;2026&#8209;04&#8209;19</samp></td><td>the candidate manifest</td></tr>
 <tr><td>Target&nbsp;tier</td><td><samp>Tier&nbsp;6&nbsp;&#8209;&nbsp;STANDALONE&#8209;TRO</samp></td><td>the candidate manifest</td></tr>
 </tbody>
 </table>
@@ -143,7 +143,7 @@ The sections below give the status of each tier, then the status of each expecta
 
 Detailed expectation: Every trov:hash on the TRO's artifacts and composition fingerprint carries its value in trov:hashValue as its algorithm writes one: lowercase hexadecimal digits, 64 of them for sha256, sha3-256, blake2s and blake3; 96 for sha384 and sha3-384; 128 for sha512, sha3-512 and blake2b.
 
-Defined in version: `trace-spec-2026-04-19`
+Defined in version: `trace-2026-04-19`
 
 Expectation unmet in 4 places:
 
