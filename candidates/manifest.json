@@ -9,14 +9,14 @@
     "02-spec-example-2026-04-08-with-base-and-hashes": {
         "target": [
             { "tier": "STANDALONE-TRO", "version": "trace-2026-04-19" },
-            { "tier": "STANDALONE-TRO", "version": "trace-0.1" }
+            { "tier": "STANDALONE-TRO", "version": "trace-main" }
         ],
         "description": "The 2026-04-08 example with an `@base` in its `@context` and a sha256 value in each of the four hash fields. Every value is computed from the artifact's own `@id` for reproducibility's sake only."
     },
     "03-spec-example-2026-04-08-with-node-ids": {
         "target": [
             { "tier": "LINKABLE-TRO", "version": "trace-2026-04-19" },
-            { "tier": "LINKABLE-TRO", "version": "trace-0.1" }
+            { "tier": "LINKABLE-TRO", "version": "trace-main" }
         ],
         "description": "The preceding candidate with an `@id` on each of its five remaining bare node objects, `trov:createdWith` and the four `trov:hash` nodes, and a time zone, `Z`, on each of its three times."
     }
