@@ -15,7 +15,7 @@ This candidate is expected to satisfy `Tier 6 - STANDALONE-TRO` at version `trac
 <tr><th align="left">Target version</th><th align="left">Target tier</th><th align="left">Tier Status</th><th align="left">Expectation Status</th><th align="left">Report</th></tr>
 </thead>
 <tbody>
-<tr><td><samp>trace&#8209;2026&#8209;04&#8209;19</samp></td><td><samp>Tier&nbsp;6&nbsp;&#8209;&nbsp;STANDALONE&#8209;TRO</samp></td><td>❌&nbsp;not&nbsp;met</td><td><a href="01-spec-example-2026-04-08__at__trace-2026-04-19__to__tier-6.md#diagnostics">❌ 1 unmet</a></td><td><a href="01-spec-example-2026-04-08__at__trace-2026-04-19__to__tier-6.md">01-spec-example-2026-04-08__at__trace-2026-04-19__to__tier-6.md</a></td></tr>
+<tr><td><samp>trace&#8209;2026&#8209;04&#8209;19</samp></td><td><samp>Tier&nbsp;6&nbsp;&#8209;&nbsp;STANDALONE&#8209;TRO</samp></td><td>❌&nbsp;not&nbsp;met</td><td><a href="01-spec-example-2026-04-08__to__tier-6__of__trace-2026-04-19.md#diagnostics">❌ 1 unmet</a></td><td><a href="01-spec-example-2026-04-08__to__tier-6__of__trace-2026-04-19.md">01-spec-example-2026-04-08__to__tier-6__of__trace-2026-04-19.md</a></td></tr>
 </tbody>
 </table>
 
@@ -32,8 +32,8 @@ This candidate is expected to satisfy `Tier 6 - STANDALONE-TRO` at version `trac
 <tr><th align="left">Target version</th><th align="left">Target tier</th><th align="left">Tier Status</th><th align="left">Expectation Status</th><th align="left">Report</th></tr>
 </thead>
 <tbody>
-<tr><td><samp>trace&#8209;2026&#8209;04&#8209;19</samp></td><td><samp>Tier&nbsp;6&nbsp;&#8209;&nbsp;STANDALONE&#8209;TRO</samp></td><td>✅&nbsp;met</td><td>✅&nbsp;all&nbsp;met</td><td><a href="02-spec-example-2026-04-08-with-base-and-hashes__at__trace-2026-04-19__to__tier-6.md">02-spec-example-2026-04-08-with-base-and-hashes__at__trace-2026-04-19__to__tier-6.md</a></td></tr>
-<tr><td><samp>trace&#8209;main</samp></td><td><samp>Tier&nbsp;6&nbsp;&#8209;&nbsp;STANDALONE&#8209;TRO</samp></td><td>❌&nbsp;not&nbsp;met</td><td><a href="02-spec-example-2026-04-08-with-base-and-hashes__at__trace-main__to__tier-6.md#diagnostics">❌ 3 unmet</a></td><td><a href="02-spec-example-2026-04-08-with-base-and-hashes__at__trace-main__to__tier-6.md">02-spec-example-2026-04-08-with-base-and-hashes__at__trace-main__to__tier-6.md</a></td></tr>
+<tr><td><samp>trace&#8209;2026&#8209;04&#8209;19</samp></td><td><samp>Tier&nbsp;6&nbsp;&#8209;&nbsp;STANDALONE&#8209;TRO</samp></td><td>✅&nbsp;met</td><td>✅&nbsp;all&nbsp;met</td><td><a href="02-spec-example-2026-04-08-with-base-and-hashes__to__tier-6__of__trace-2026-04-19.md">02-spec-example-2026-04-08-with-base-and-hashes__to__tier-6__of__trace-2026-04-19.md</a></td></tr>
+<tr><td><samp>trace&#8209;main</samp></td><td><samp>Tier&nbsp;6&nbsp;&#8209;&nbsp;STANDALONE&#8209;TRO</samp></td><td>❌&nbsp;not&nbsp;met</td><td><a href="02-spec-example-2026-04-08-with-base-and-hashes__to__tier-6__of__trace-main.md#diagnostics">❌ 3 unmet</a></td><td><a href="02-spec-example-2026-04-08-with-base-and-hashes__to__tier-6__of__trace-main.md">02-spec-example-2026-04-08-with-base-and-hashes__to__tier-6__of__trace-main.md</a></td></tr>
 </tbody>
 </table>
 
@@ -50,7 +50,7 @@ This candidate is expected to satisfy `Tier 7 - LINKABLE-TRO` at version `trace-
 <tr><th align="left">Target version</th><th align="left">Target tier</th><th align="left">Tier Status</th><th align="left">Expectation Status</th><th align="left">Report</th></tr>
 </thead>
 <tbody>
-<tr><td><samp>trace&#8209;2026&#8209;04&#8209;19</samp></td><td><samp>Tier&nbsp;7&nbsp;&#8209;&nbsp;LINKABLE&#8209;TRO</samp></td><td>✅&nbsp;met</td><td>✅&nbsp;all&nbsp;met</td><td><a href="03-spec-example-2026-04-08-with-node-ids__at__trace-2026-04-19__to__tier-7.md">03-spec-example-2026-04-08-with-node-ids__at__trace-2026-04-19__to__tier-7.md</a></td></tr>
-<tr><td><samp>trace&#8209;main</samp></td><td><samp>Tier&nbsp;7&nbsp;&#8209;&nbsp;LINKABLE&#8209;TRO</samp></td><td>❌&nbsp;not&nbsp;met</td><td><a href="03-spec-example-2026-04-08-with-node-ids__at__trace-main__to__tier-7.md#diagnostics">❌ 2 unmet</a></td><td><a href="03-spec-example-2026-04-08-with-node-ids__at__trace-main__to__tier-7.md">03-spec-example-2026-04-08-with-node-ids__at__trace-main__to__tier-7.md</a></td></tr>
+<tr><td><samp>trace&#8209;2026&#8209;04&#8209;19</samp></td><td><samp>Tier&nbsp;7&nbsp;&#8209;&nbsp;LINKABLE&#8209;TRO</samp></td><td>✅&nbsp;met</td><td>✅&nbsp;all&nbsp;met</td><td><a href="03-spec-example-2026-04-08-with-node-ids__to__tier-7__of__trace-2026-04-19.md">03-spec-example-2026-04-08-with-node-ids__to__tier-7__of__trace-2026-04-19.md</a></td></tr>
+<tr><td><samp>trace&#8209;main</samp></td><td><samp>Tier&nbsp;7&nbsp;&#8209;&nbsp;LINKABLE&#8209;TRO</samp></td><td>❌&nbsp;not&nbsp;met</td><td><a href="03-spec-example-2026-04-08-with-node-ids__to__tier-7__of__trace-main.md#diagnostics">❌ 2 unmet</a></td><td><a href="03-spec-example-2026-04-08-with-node-ids__to__tier-7__of__trace-main.md">03-spec-example-2026-04-08-with-node-ids__to__tier-7__of__trace-main.md</a></td></tr>
 </tbody>
 </table>
