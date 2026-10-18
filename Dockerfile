@@ -26,7 +26,7 @@ USER repro
 
 # Import the repro modules tro-checks and review-ledger.
 ENV TRACE 'https://raw.githubusercontent.com/transparency-certified/${1}/${2}/exports'
-RUN repro.require tro-checks workflows ${TRACE} --report
+RUN repro.require tro-checks main ${TRACE} --report
 RUN repro.require review-ledger main ${CIRSS} --report
 
 CMD  /bin/bash -il
