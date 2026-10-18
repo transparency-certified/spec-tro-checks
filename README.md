@@ -22,7 +22,6 @@ the `tro-checks` module on the candidates in this repository.
 In the top-level directory of a clone of this repository, build the Docker image:
 
 ```
-make build-parent      # once, on a fresh clone
 make build-image
 ```
 

@@ -1,12 +1,6 @@
-NODE_VERSION=22.11.0
-
 REPRO_NAME=spec-tro-checks
 REPRO_DOCKER_ORG=transparency-certified
 REPRO_IMAGE_TAG=latest
-
-PARENT_IMAGE=${REPRO_DOCKER_ORG}/${REPRO_NAME}-parent:latest
-
-PARENT_BUILD_ARG_1=${NODE_VERSION}
 
 DOCKER_BUILD_PROGRESS=plain
 
@@ -16,6 +10,16 @@ start:                  start-repro   ##
 ##
 
 -include .review-ledger/host-makefile
+
+# Add tro-checks' make targets if the tro-checks module has been initialized.
+-include .tro-checks/host-makefile
+
+# Temporary, until repros sets up a module's files the first time one of its targets is needed.
+# The make it runs sets SETTING_UP_MODULES, so it doesn't try again itself.
+ifndef SETTING_UP_MODULES
+.%/host-makefile:
+	$(if $(REPRO_IMAGE_ID),$(MAKE) init-repro SETTING_UP_MODULES=true)
+endif
 
 # Local stand-in until this target lives in review-ledger/host-makefile.
 # Calls that module's own review recipe in the trim directory: the REPRO
